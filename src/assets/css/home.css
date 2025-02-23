@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'Retro';
+  src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/src/assets/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
+}
+
+@keyframes fadeOut-left {
+  to {
+      transform: scale(0) translateY(90vh) translateX(-220vw) ;
+  }
+}
+
+@keyframes fadeOut-left-movile {
+  to {
+      transform: translateX(-100vw);
+  }
+}
+
+@keyframes fadeOut-right {
+  to {
+      transform: scale(0) translateY(90vh) translateX(190vw);
+  }
+}
+
+@keyframes fadeOut-right-movile {
+  to {
+      transform: translateX(100vw);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes fade-Out {
+  to { opacity: 0; }
+}
+
+:root {
+  --titles-color: rgb(201, 4, 4);
+}
+
+html, body {
+  color: white;
+  font-family: 'OpenSans';
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.particles-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 10%;
+}
+
+.text-content {
+  max-width: 600px;
+  margin: 4.5rem 0 0 1rem;
+
+  animation: fadeOut-left linear both;
+  animation-timeline: scroll(root);
+}
+
+h1 {
+  font-family: 'Retro', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.developer {
+  color: var(--titles-color);
+}
+
+.name-tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 3px;
+  width: 170px;
+  height: 20px;
+  margin-top: 10px;
+  
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.name-tag span {
+  font-family: 'Retro', sans-serif;
+  letter-spacing: 1px;
+  min-width: 100px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-weight: bold;
+  font-family: 'Retro', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.resume-btn {
+  margin-right: 10px;
+  background: var(--titles-color);
+  color: inherit;
+  letter-spacing: 1.5px;
+}
+
+.contact-btn {
+  color: black;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition: 0.5s;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transition: 0.5s;
+}
+
+.contact-btn::before {
+  border-top: 2px solid var(--titles-color);
+  border-left: 2px solid var(--titles-color);
+}
+
+.contact-btn::after {
+  border-bottom: 2px solid var(--titles-color);
+  border-right: 2px solid var(--titles-color);
+}
+
+.btn:hover::before, .btn:hover::after {
+  width: 96%;
+  height: 95%; 
+}
+
+.btn:hover {
+  transition-delay: 0.5s;
+  color: black;
+  background: white;
+  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white;
+}
+
+.contact-btn:hover {
+  color: white;
+  background: var(--titles-color);
+  box-shadow: 0 0 10px var(--titles-color), 0 0 20px var(--titles-color), 0 0 40px var(--titles-color);
+}
+
+.avatar-image {
+  max-width: 500px;
+  border-radius: 15%;
+  margin-right: auto;
+
+  animation: fadeOut-right linear both;
+  animation-timeline: scroll(root);
+}
+
+.arrow-icon {
+  display: none;
+}
+
+.bounce {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.fade-out {
+  animation: fade-Out linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 500px;
+}
+
+@media (max-width: 950px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    padding: 0 5%;
+  }
+
+  .avatar-image {
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+    order: -1;
+
+    animation: fadeOut-right-movile linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 300px;
+  }
+
+  .name-tag {
+    margin: 10px auto;
+  }
+
+  .text-content {
+    max-width: 100%;
+    margin: 2rem;
+
+    animation: fadeOut-left-movile linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 300px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .name-tag {
+    width: 150px;
+    height: 18px;
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .avatar-image {
+    margin-top: 10%;
+  }
+
+  .arrow-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+}

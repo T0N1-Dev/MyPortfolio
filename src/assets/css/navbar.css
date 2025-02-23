@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Overcame';
+    src: url('/src/assets/fonts/OvercameDemoBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Retro';
+    src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
+}
+
+@keyframes fadeOut {
+    to {
+        transform: scale(2);
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1% 5% 0 5%;
+    box-sizing: border-box;
+    z-index: 1;
+
+    animation: fadeOut linear both;
+    animation-timeline: scroll(root);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-center {
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.nav-link {
+    color: inherit;
+    font-family: 'Retro', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.logo {
+    cursor: default;
+    color: inherit;
+    font-family: 'Overcame', sans-serif;
+    font-size: 65px;
+    align-items: center;
+    transition: color 0.1s ease-in;  
+    position: relative;
+    top: -25px;
+}
+
+.logo:hover {
+    color: rgb(201, 4, 4);
+}
+
+.github-icon, .stackOverflow-icon {
+    scale: 1.2;
+}
+
+.social-icon {
+    width: 40px; 
+    height: 40px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px; 
+    left: 40px;
+    width: 100%;
+    max-width: 100px;
+    padding: 15px 0;
+    text-align: left;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 3% 5%;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        margin: 10px 0;
+        width: fit-content;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
