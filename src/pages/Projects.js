@@ -4,14 +4,19 @@ import '../assets/css/projects.css';
 const projects = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
-    alt: "Modern workspace with laptop",
-    title: "E-Commerce Dashboard",
-    description: "A full-stack e-commerce dashboard with real-time analytics and inventory management",
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740341273/Calendar_l5sjkc.jpg",
+    alt: "Event Calendar App Image",
+    title: "Event Calendar App",
+    description: `A modern and intuitive calendar app for managing events efficiently. 
+                  Users can register securely, create, update, view, and share events with ease. 
+                  Designed for a smooth and fast experience, it simplifies scheduling and collaboration.`,
     technologies: [
       { logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg", name: "React" },
-      { logo: "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg", name: "Node.js" },
-      { logo: "https://www.mongodb.com/assets/images/global/leaf.svg", name: "MongoDB" }
+      { logo: "https://img.icons8.com/fluency/240/node-js.png", name: "Node.js" },
+      { logo: "https://img.icons8.com/color/96/mongo-db.png", name: "MongoDB" },
+      { logo: "https://img.icons8.com/color/480/express-js.png", name: "Express.js" },
+      { logo: "https://img.icons8.com/color/480/redux.png", name: "Redux" },
+      { logo: "https://img.icons8.com/color/480/java-web-token.png", name: "JWT" }
     ]
   },
   {

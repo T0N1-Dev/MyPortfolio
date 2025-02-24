@@ -265,7 +265,7 @@ p {
 
   .text-content {
     max-width: 100%;
-    margin: 2rem;
+    margin-top: 0;
 
     animation: fadeOut-left-movile linear both;
     animation-timeline: scroll(root);

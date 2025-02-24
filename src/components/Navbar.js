@@ -71,21 +71,20 @@ export const Navbar = () => {
         </a>
       </div>
       
-      {isMobile && isOpen ? (
+      {isMobile && isOpen && (
         <div className="mobile-menu">
           <Link to="/" className="nav-link animate__animated animate__fadeInDown animate__faster" onClick={toggleMenu}>Home</Link>
           <Link to="/about" className="nav-link animate__animated animate__fadeInDown animate__fast" onClick={toggleMenu}>About</Link>
           <Link to="/contact" className="nav-link animate__animated animate__fadeInDown" onClick={toggleMenu}>Contact</Link>
         </div>
-      )
-      : (
-        <div className="mobile-menu">
-          <Link to="/" className="nav-link animate__animated animate__fadeOutUp animate__faster" onClick={toggleMenu}>Home</Link>
-          <Link to="/about" className="nav-link animate__animated animate__fadeOutUp animate__fast" onClick={toggleMenu}>About</Link>
-          <Link to="/contact" className="nav-link animate__animated animate__fadeOutUp" onClick={toggleMenu}>Contact</Link>
-        </div>
-      )
-    }
+      )}
+      { !isOpen && (
+          <div className="mobile-menu">
+            <Link to="/" className="nav-link animate__animated animate__fadeOutUp animate__faster" onClick={toggleMenu}>Home</Link>
+            <Link to="/about" className="nav-link animate__animated animate__fadeOutUp animate__fast" onClick={toggleMenu}>About</Link>
+            <Link to="/contact" className="nav-link animate__animated animate__fadeOutUp" onClick={toggleMenu}>Contact</Link>
+          </div>
+      )}
     </nav>
   )
 }
