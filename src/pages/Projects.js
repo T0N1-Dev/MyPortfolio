@@ -21,10 +21,10 @@ const projects = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2070",
-    alt: "Code on dark background",
-    title: "Social Media Platform",
-    description: "A modern social networking platform with real-time messaging and content sharing",
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740515058/Estadistica_en_el_dash_2_z4weoy.jpg",
+    alt: "Management ISMN Image",
+    title: "ISMN Management",
+    description: "Efficient management of ISMN requests and music catalog. This platform allows clients to register and submit ISMN requests for their music books. All users can explore the registered music catalog. Employees can manage requests, site publications, generate graphical reports, and track user activity from an intuitive interface.",
     technologies: [
       { logo: "https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png", name: "Next.js" },
       { logo: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg", name: "TailwindCSS" },

@@ -17,10 +17,11 @@ h2 {
   margin: 0;
   text-align: center;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  transform: translateY(-400%) scale(0);
+  transform: translateY(-85vh) scale(0);
 
   animation: fadeIn linear both;
   animation-timeline: scroll(root);
+  animation-range: 0 35vh;
 }
 
 .projects-title {
@@ -39,14 +40,16 @@ h2 {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   color: white;
+  height: fit-content;
   border-radius: 0.75rem;
   overflow: hidden;
   opacity: 0;
-  transform: scale(0);
+  transform: translateY(-65vh) scale(.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   animation: fadeIn-card linear both;
   animation-timeline: scroll(root);
+  animation-range: 0 35vh;
 }
 
 .project-image-container {
@@ -108,88 +111,96 @@ h2 {
   color: #666;
 }
 
+.technology:has(img[alt="Express.js logo"]) .technology-logo {
+  filter: invert(1);
+}
+
 
 @keyframes fadeIn {
-to {
-    transform: translateY(0) scale(1);
-}
-}
-
-@keyframes fadeIn-right-movile {
-from {
-  transform: translateX(100vw);
-}
-to {
-  transform: translateX(0);
-}
-}
-
-@keyframes fadeIn-left-movile {
-from {
-  transform: translateX(-100vw)
-} to {
-  transform: translateX(0);
-}
+  to {
+      transform: translateY(-50vh) scale(1);
+  }
 }
 
 @keyframes fadeIn-card {
-to {
-    transform: scale(1);
-    opacity: 1;
+  to {
+      transform: translateY(-50vh) scale(1);
+      opacity: 1;
+  }
 }
+
+@keyframes fadeIn-right-movile {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn-left-movile {
+  from {
+    transform: translateX(-100vw)
+  } to {
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 768px) {
-.projects-grid {
-grid-template-columns: repeat(2, 1fr);
-}
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-.projects-grid {
-grid-template-columns: repeat(3, 1fr);
-}
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media (max-width: 1030px) {
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    transform: translateY(0) scale(1);
+@media (max-width: 1024px) {
+  h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      transform: translateY(0) scale(1);
+      animation: fadeIn-right-movile linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 300px;
+  }
+
+  .projects-section {
+    max-height: fit-content;
+  }
+
+  .projects-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project-card {
+      width: 90%;
+      max-width: 400px;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      animation: none;
+  }
+
+  .project-card:first-child {
+    animation: fadeIn-left-movile linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 32%;
+  }
+
+  .project-card:nth-child(2) {
     animation: fadeIn-right-movile linear both;
     animation-timeline: scroll(root);
-    animation-range: 0 400px;
-}
+    animation-range: 0 70%;
+  }
 
-.projects-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.project-card {
-    width: 90%;
-    max-width: 400px;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    animation: none;
-}
-
-.project-card:first-child {
-  animation: fadeIn-left-movile linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 30%;
-}
-
-.project-card:nth-child(2) {
-  animation: fadeIn-right-movile linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 70%;
-}
-
-.project-card:last-child {
-  animation: fadeIn-left-movile linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 95%;
-}
+  .project-card:last-child {
+    animation: fadeIn-left-movile linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 95%;
+  }
 }

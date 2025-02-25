@@ -78,7 +78,7 @@ export const Navbar = () => {
           <Link to="/contact" className="nav-link animate__animated animate__fadeInDown" onClick={toggleMenu}>Contact</Link>
         </div>
       )}
-      { !isOpen && (
+      { isMobile && !isOpen && (
           <div className="mobile-menu">
             <Link to="/" className="nav-link animate__animated animate__fadeOutUp animate__faster" onClick={toggleMenu}>Home</Link>
             <Link to="/about" className="nav-link animate__animated animate__fadeOutUp animate__fast" onClick={toggleMenu}>About</Link>

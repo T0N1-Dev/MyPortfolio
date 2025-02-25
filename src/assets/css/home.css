@@ -10,7 +10,7 @@
 
 @keyframes fadeOut-left {
   to {
-      transform: scale(0) translateY(90vh) translateX(-220vw) ;
+      transform: scale(0) translateY(90vh) translateX(-270vw) ;
   }
 }
 
