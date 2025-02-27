@@ -26,8 +26,8 @@ export const Home = () => {
     <svg 
       className={className} 
       fill="#ffffff" 
-      height="80px" 
-      width="80px" 
+      height="60px" 
+      width="60px" 
       viewBox="0 0 330 330" 
       stroke="#c90404"
       xmlns="http://www.w3.org/2000/svg"
