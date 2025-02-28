@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { VantaFogBackground } from '../components/VantaFogBackground'
 import { ParticlesBackground } from '../components/ParticlesBackground'
 import '../assets/css/home.css';
 
 export const Home = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  console.log("Home rendered");
+  const arrowRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 30) {
-        setIsScrolled(true);
-      } else { 
-        setIsScrolled(false);  
+      if (arrowRef.current) {
+        if (window.scrollY >= 30) {
+          arrowRef.current.classList.add('fade-out');
+        } else {
+          arrowRef.current.classList.remove('fade-out');
+        }
       }
     }
-
     window.addEventListener('scroll', handleScroll);
   
     return () => {
@@ -24,6 +26,7 @@ export const Home = () => {
 
   const ArrowIcon = ({ className }) => (
     <svg 
+      ref={arrowRef}
       className={className} 
       fill="#ffffff" 
       height="60px" 
@@ -61,20 +64,20 @@ export const Home = () => {
               software architecture, cloud deployments and testing.
               Feel free to contact me so we can work together! 🤝
             </p>
-            <div class="buttons-container">
-              <button class="btn resume-btn">View Resume</button>
-              <button class="btn contact-btn">Contact Me</button>
+            <div className="buttons-container">
+              <button className="btn resume-btn">View Resume</button>
+              <button className="btn contact-btn">Contact Me</button>
             </div>
           </div>
           <img 
-            src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739068069/erasebg-transformed_aelxmt.webp" 
+            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1739068069/erasebg-transformed_aelxmt.webp" 
             className="avatar-image animate__animated animate__fadeInRight"
             alt="My avatar"
           />
         </div>
 
         {/* Arrow section */}
-        <ArrowIcon className={`arrow-icon bounce ${isScrolled ? 'fade-out' : ''}`} />
+        <ArrowIcon className="arrow-icon bounce" />
       </section>
     </>
   )

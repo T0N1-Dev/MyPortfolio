@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useWindowSize } from '../hooks/useWindowSize';
 import '../assets/css/navbar.css';
 
@@ -36,9 +35,9 @@ export const Navbar = () => {
           </button>
         ) : (
           <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <button className="nav-link">Home</button>
+            <button className="nav-link">About</button>
+            <button className="nav-link">Projects</button>
           </div>
         )}
       </div>
@@ -73,16 +72,16 @@ export const Navbar = () => {
       
       {isMobile && isOpen && (
         <div className="mobile-menu">
-          <Link to="/" className="nav-link animate__animated animate__fadeInDown animate__faster" onClick={toggleMenu}>Home</Link>
-          <Link to="/about" className="nav-link animate__animated animate__fadeInDown animate__fast" onClick={toggleMenu}>About</Link>
-          <Link to="/contact" className="nav-link animate__animated animate__fadeInDown" onClick={toggleMenu}>Contact</Link>
+          <button className="nav-link animate__animated animate__fadeInDown animate__faster" onClick={toggleMenu}>Home</button>
+          <button className="nav-link animate__animated animate__fadeInDown animate__fast" onClick={toggleMenu}>About</button>
+          <button className="nav-link animate__animated animate__fadeInDown" onClick={toggleMenu}>Contact</button>
         </div>
       )}
       { isMobile && !isOpen && (
           <div className="mobile-menu">
-            <Link to="/" className="nav-link animate__animated animate__fadeOutUp animate__faster" onClick={toggleMenu}>Home</Link>
-            <Link to="/about" className="nav-link animate__animated animate__fadeOutUp animate__fast" onClick={toggleMenu}>About</Link>
-            <Link to="/contact" className="nav-link animate__animated animate__fadeOutUp" onClick={toggleMenu}>Contact</Link>
+            <button className="nav-link animate__animated animate__fadeOutUp animate__faster" onClick={toggleMenu}>Home</button>
+            <button className="nav-link animate__animated animate__fadeOutUp animate__fast" onClick={toggleMenu}>About</button>
+            <button className="nav-link animate__animated animate__fadeOutUp" onClick={toggleMenu}>Contact</button>
           </div>
       )}
     </nav>

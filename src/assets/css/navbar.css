@@ -51,9 +51,11 @@
 }
 
 .nav-link {
+    background-color: transparent;
+    border: 0;
     color: inherit;
+    cursor: pointer;
     font-family: 'Retro', sans-serif;
-    text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);

@@ -3,6 +3,7 @@ import * as THREE from "three";
 import FOG from "vanta/dist/vanta.fog.min";
 
 export const VantaFogBackground = () => {
+  console.log('VantaFogBackground component rendered!');
     const myRef = useRef(null);
     const vantaRef = useRef(null); 
   

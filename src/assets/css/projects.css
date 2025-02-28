@@ -5,9 +5,9 @@
 
 .projects-section {
   max-width: 78vw;
-  max-height: 85vh;
+  max-height: 60vh;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 0 1rem;
 }
 
 h2 {
@@ -52,6 +52,35 @@ h2 {
   animation-range: 0 35vh;
 }
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: invert(1);
+  margin-top: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2) rotate(45deg);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
 .project-image-container {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -71,12 +100,6 @@ h2 {
 
 .project-content {
   padding: .3rem 1.5rem 1.5rem 1.5rem;
-}
-
-.project-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
 }
 
 .project-description {
@@ -124,11 +147,10 @@ h2 {
 
 .technology:has(img[alt="Express.js logo"]),
 .technology:has(img[alt="jQuery logo"]) {
- .technology-logo {
-  filter: invert(1);
+  .technology-logo {
+    filter: invert(1);
+  }
 }
-}
-
 
 @keyframes fadeIn {
   to {
@@ -225,6 +247,11 @@ h2 {
     animation: fadeIn-left-movile linear both;
     animation-timeline: scroll(root);
     animation-range: 0 75%;
+  }
+
+  .icon {
+    width: 1.3rem;
+    height: 1.3rem;
   }
 
   .project-technologies {
