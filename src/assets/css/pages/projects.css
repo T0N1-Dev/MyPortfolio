@@ -3,6 +3,10 @@
   src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
 }
 
+:root {
+  --technology-distance-left: -7.5vw;
+}
+
 .projects-section {
   max-width: 78vw;
   max-height: 60vh;
@@ -31,7 +35,7 @@ h2 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -134,8 +138,8 @@ h2 {
 }
 
 .technology-logo {
-  width: 2rem;
-  height: 2rem;
+  width: clamp(25px, 2.5vw, 100px);
+  height: auto;
   object-fit: contain;
   color: white;
 }
@@ -184,22 +188,20 @@ h2 {
 
 @keyframes translate-technologies {
   from {
-    transform: translateX(-75px);
+    transform: translateX(var(--technology-distance-left));
   }
   to {
-    transform: translateX(12px);
+    transform: translateX(1rem);
   }
 }
 
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) and (min-width: 401px) {
+  .project-technologies.animate {
+    animation: none;
   }
-}
 
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .project-technologies-wrapper.mask-wrapper {
+    mask-image: none
   }
 }
 
@@ -234,19 +236,19 @@ h2 {
   .project-card:first-child {
     animation: fadeIn-left-movile linear both;
     animation-timeline: scroll(root);
-    animation-range: 0 32%;
+    animation-range: 0 70vh;
   }
 
   .project-card:nth-child(2) {
     animation: fadeIn-right-movile linear both;
     animation-timeline: scroll(root);
-    animation-range: 0 55%;
+    animation-range: 0 140vh;
   }
 
   .project-card:last-child {
     animation: fadeIn-left-movile linear both;
     animation-timeline: scroll(root);
-    animation-range: 0 75%;
+    animation-range: 0 210vh;
   }
 
   .icon {
@@ -258,9 +260,8 @@ h2 {
     gap: .4rem;
   }
 
-  .technology-logo {
-    width: 1.4rem;
-    height: 1.4rem;
+  :root {
+    --technology-distance-left: -55px;
   }
 
   .technology-name {

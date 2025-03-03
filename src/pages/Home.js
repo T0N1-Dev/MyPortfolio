@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { VantaFogBackground } from '../components/VantaFogBackground'
 import { ParticlesBackground } from '../components/ParticlesBackground'
-import '../assets/css/home.css';
+import '../assets/css/pages/home.css';
 
 export const Home = () => {
-  console.log("Home rendered");
   const arrowRef = useRef(null);
 
   useEffect(() => {
@@ -71,7 +70,7 @@ export const Home = () => {
           </div>
           <img 
             src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1739068069/erasebg-transformed_aelxmt.webp" 
-            className="avatar-image animate__animated animate__fadeInRight"
+            className="avatar-image"
             alt="My avatar"
           />
         </div>

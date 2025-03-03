@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/slider.css';
+import '../assets/css/components/slider.css';
 
 const technologies = [
     {
@@ -30,7 +30,7 @@ const technologies = [
     {
         id: 6,
         name: 'React Router',
-        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594999/react-router-svgrepo-com_il0l7e.svg'
+        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740594999/react-router-svgrepo-com_il0l7e.svg'
     },
     {
         id: 7,
@@ -40,7 +40,7 @@ const technologies = [
     {
         id: 8,
         name: 'Jest',
-        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/v1740591797/jest-snapshot-svgrepo-com_xykglj.svg'
+        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740591797/jest-snapshot-svgrepo-com_xykglj.svg'
     },
     {
         id: 9,
@@ -50,7 +50,7 @@ const technologies = [
     {
         id: 10,
         name: 'Django',
-        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/v1740587765/django-icon-svgrepo-com_ve7q2c.svg'
+        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740587765/django-icon-svgrepo-com_ve7q2c.svg'
     },
     {
         id: 11,
@@ -65,7 +65,7 @@ const technologies = [
     {
         id: 13,
         name: 'SQLite',
-        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/v1740587913/sqlite-svgrepo-com_cdkqos.svg'
+        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740587913/sqlite-svgrepo-com_cdkqos.svg'
     },
     {
         id: 14,
@@ -75,15 +75,22 @@ const technologies = [
     {
         id: 15,
         name: 'Sass',
-        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594744/sass-svgrepo-com_bxczfn.svg'
+        img: 'https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740594744/sass-svgrepo-com_bxczfn.svg'
     },
 ]
 
 export const Slider = () => {
+    console.log('Slider Rendered');
   return (
-    <div class="wrapper">
-        {technologies.map(technology => (
-            <div class={`item ${'item' + technology.id}`}><img src={technology.img} alt={`${technology.name}-icon`} className='technology-slider'/></div>
+    <div className="wrapper">
+        {technologies.map((technology, index) => (
+            <div 
+                key={technology.id}
+                className={`item ${'item' + technology.id}`}
+                style={{ '--item': index + 1 }}
+            >
+                <img src={technology.img} alt={`${technology.name}-icon`} className='technology-slider'/>
+            </div>
         ))}
     </div>
   )

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useWindowSize } from '../hooks/useWindowSize';
-import '../assets/css/navbar.css';
+import '../assets/css/components/navbar.css';
 
 export const Navbar = () => {
 

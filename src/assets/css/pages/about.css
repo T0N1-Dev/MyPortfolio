@@ -1,0 +1,112 @@
+.container-about-me {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 10%;
+    position: relative;
+}
+
+.text-content-about-me {
+    max-width: 600px;
+    margin: 4.5rem 0 0 1rem;
+}
+
+.me {
+    color: var(--titles-color);
+}
+
+.about-me-image {
+    max-width: 500px;
+    margin: 30% auto 0 0;
+}
+
+.glowing-circle {
+    width: 500px;
+    height: 500px;
+    margin: 2% auto 0 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(80, 30, 130, 0.8) 20%, rgba(30, 10, 50, 0.6) 60%, rgba(10, 0, 30, 0.3) 100%);
+    box-shadow: 0 0 50px rgba(80, 30, 130, 0.5);
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    z-index: -1;
+    animation: liquid-effect 4s linear infinite alternate;
+}
+
+.ball {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 62%;
+    right: 17%;
+    transition: top .5s ease-in, right .5s ease-in, transform .5s ease-in;
+    z-index: 4;
+}
+
+.ball.about-me-image-ballCSS {
+    transform: scale(0);
+    z-index: 3;
+}
+
+.ball.about-me-image-ballCSS.animate-ball {
+    top: 48%;
+    right: 14%;
+    transform: scale(1);
+}
+
+.ball.about-me-image-ballHTML {
+    top: 48%;
+    right: 14%;
+    transform: scale(0);
+    z-index: 2;
+}
+
+.ball.about-me-image-ballHTML.animate-ball {
+    top: 34%;
+    right: 17%;
+    transform: scale(1);
+    transition-delay: .5s;
+}
+
+.ball.about-me-image-ballJS {
+    top: 34%;
+    right: 17%;
+    transform: scale(0);
+    z-index: 1;
+}
+
+.ball.about-me-image-ballJS.animate-ball {
+    top: 22%;
+    right: 21%;
+    transform: scale(1);
+    transition-delay: 1s;
+}
+
+@keyframes liquid-effect {
+    0% {
+        border-radius: 30% 70% 46% 54% / 64% 47% 53% 36%;
+    }
+    25% {
+        border-radius: 36% 64% 53% 47% / 58% 51% 49% 42%;
+    }
+    50% {
+        border-radius: 45% 55% 58% 42% / 47% 60% 40% 53%;
+    }
+    75% {
+        border-radius: 40% 60% 55% 45% / 49% 56% 44% 51%;
+    }
+    100% {
+        border-radius: 36% 64% 53% 47% / 58% 51% 49% 42%;
+    }
+}
+
+@media (max-width: 950px) {
+    .container-about-me {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
