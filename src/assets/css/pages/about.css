@@ -4,7 +4,7 @@
     align-items: center;
     height: auto;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
     padding: 0 10%;
     position: relative;
 }
@@ -35,6 +35,11 @@
     right: 10%;
     z-index: -1;
     animation: liquid-effect 4s linear infinite alternate;
+    transition: transform 2s ease-in-out;
+}
+
+.glowing-circle-animate {
+    transform: translate(-135%, 110%) scale(1.4);
 }
 
 .ball {
@@ -43,7 +48,7 @@
     position: absolute;
     top: 62%;
     right: 17%;
-    transition: top .5s ease-in, right .5s ease-in, transform .5s ease-in;
+    transition: top .4s ease-in, right .4s ease-in, transform .4s ease-in;
     z-index: 4;
 }
 
@@ -69,7 +74,7 @@
     top: 34%;
     right: 17%;
     transform: scale(1);
-    transition-delay: .5s;
+    transition-delay: .4s;
 }
 
 .ball.about-me-image-ballJS {
@@ -83,7 +88,7 @@
     top: 22%;
     right: 21%;
     transform: scale(1);
-    transition-delay: 1s;
+    transition-delay: .8s;
 }
 
 @keyframes liquid-effect {

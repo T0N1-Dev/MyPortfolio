@@ -122,3 +122,9 @@
         left: max(calc(-3rem * var(--amount-technologies)), 100%);
     }
 }
+
+@media (min-width: 1921px) {
+    .wrapper {
+        margin-top: calc(30vh + 100px);
+    }
+}

@@ -3,7 +3,7 @@ import { VantaFogBackground } from '../components/VantaFogBackground'
 import { ParticlesBackground } from '../components/ParticlesBackground'
 import '../assets/css/pages/home.css';
 
-export const Home = () => {
+export const Home = ({ homeRef }) => {
   const arrowRef = useRef(null);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const Home = () => {
   
   return (
     <>
-      <section className='home'>
+      <section className='home-section' ref={homeRef}>
         <div className='background-layer'>
           <VantaFogBackground />
         </div>

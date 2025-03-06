@@ -8,39 +8,6 @@
   src: url('/src/assets/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
 }
 
-@keyframes fadeOut-left {
-  to {
-      transform: scale(0) translateY(90vh) translateX(-270vw) ;
-  }
-}
-
-@keyframes fadeOut-left-movile {
-  to {
-      transform: translateX(-100vw);
-  }
-}
-
-@keyframes fadeOut-right {
-  to {
-      transform: scale(0) translateY(90vh) translateX(190vw);
-  }
-}
-
-@keyframes fadeOut-right-movile {
-  to {
-      transform: translateX(100vw);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes fade-Out {
-  to { opacity: 0; }
-}
-
 :root {
   --titles-color: rgb(201, 4, 4);
 }
@@ -59,7 +26,7 @@ html, body {
   }
 }
 
-.home {
+.home-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,9 +62,8 @@ html, body {
 
   animation: fadeOut-left linear both;
   animation-timeline: scroll(root);
+  animation-range: 0 80vh;
 }
-
-
 
 h1 {
   font-family: 'Retro', sans-serif;
@@ -105,7 +71,6 @@ h1 {
   font-weight: bold;
   margin: 0;
 }
-
 
 .developer {
   color: var(--titles-color);
@@ -226,6 +191,7 @@ p {
 
   animation: fadeOut-right linear both;
   animation-timeline: scroll(root);
+  animation-range: 0 500px;
 }
 
 .bounce {
@@ -236,6 +202,39 @@ p {
   animation: fade-Out linear both;
   animation-timeline: scroll(root);
   animation-range: 0 200px;
+}
+
+@keyframes fadeOut-left {
+  to {
+      transform: scale(0) translateY(70vh) translateX(-200vw) ;
+  }
+}
+
+@keyframes fadeOut-left-movile {
+  to {
+      transform: translateX(-100vw);
+  }
+}
+
+@keyframes fadeOut-right {
+  to {
+      transform: scale(0) translateY(70vh) translateX(200vw);
+  }
+}
+
+@keyframes fadeOut-right-movile {
+  to {
+      transform: translateX(100vw);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes fade-Out {
+  to { opacity: 0; }
 }
 
 @media (max-width: 950px) {

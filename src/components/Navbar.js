@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useWindowSize } from '../hooks/useWindowSize';
 import '../assets/css/components/navbar.css';
 
-export const Navbar = () => {
+export const Navbar = ({ projectsRef, aboutRef, contactRef }) => {
 
   const isMobile = useWindowSize();
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,15 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = (e, ref, scrollNumber) => {
+    e.preventDefault();
+    
+    if (ref.current) {
+      const topPosition = ref.current.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: topPosition - scrollNumber, behavior: 'smooth' });
+    }
+  }
+
   return (
     <nav className="navbar animate__animated animate__fadeIn">
 
@@ -35,9 +44,9 @@ export const Navbar = () => {
           </button>
         ) : (
           <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-            <button className="nav-link">Home</button>
-            <button className="nav-link">About</button>
-            <button className="nav-link">Projects</button>
+            <button className="nav-link" onClick={(e) => handleScroll(e, contactRef, 50)}>Contact</button>
+            <button className="nav-link" onClick={(e) => handleScroll(e, aboutRef, 0)}>About</button>
+            <button className="nav-link" onClick={(e) => handleScroll(e, projectsRef, 300)}>Projects</button>
           </div>
         )}
       </div>

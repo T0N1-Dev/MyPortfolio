@@ -1,26 +1,28 @@
 import { useEffect, useState } from 'react';
 import "../assets/css/pages/about.css";
 
-export const About = () => {
-  console.log('About Me Page');
+export const About = ({ aboutRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOutOf, setIsOutOf] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolledPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      if ((scrolledPercentage >= 60) !== isScrolled) {
-        setIsScrolled(scrolledPercentage >= 60);
+      if ((scrolledPercentage >= 50) !== isScrolled) {
+        setIsScrolled(scrolledPercentage >= 50);
+      } else if ((scrolledPercentage >= 70) !== isOutOf) {
+        setIsOutOf(scrolledPercentage >= 70);
       }
     };
   
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isScrolled]);
+  }, [isScrolled, isOutOf]);
   
 
   return (
     <>
-      <div className='container-about-me'>
+      <section className='container-about-me' ref={aboutRef}>
         <div className='text-content-about-me'>
           <h1><span>About</span> <span className='me'>Me</span></h1>
           <p>
@@ -35,12 +37,12 @@ export const About = () => {
         </div>
         <div className='about-me-images-container'>
           <img 
-            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740972144/20945770_nlggdn.png"
+            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279189/About_Me_s6rz76.png"
             className='about-me-image'
             alt="About Me"
           />
           <img 
-            src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741019216/Ball_Code_axx39o.png'
+            src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279168/Ball_Code_1_suixzv.png'
             className='ball about-me-image-ballCode'
             alt='Ball Code'
           />
@@ -50,7 +52,7 @@ export const About = () => {
             alt='Ball CSS'
           />
           <img 
-            src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741019218/Ball_HTML_bwrvww.png'
+            src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279170/Ball_HTML_1_jkjg9t.png'
             className={`ball about-me-image-ballHTML ${isScrolled ? 'animate-ball' : ''}`}
             alt='Ball HTML'
           />
@@ -59,9 +61,9 @@ export const About = () => {
             className={`ball about-me-image-ballJS ${isScrolled ? 'animate-ball' : ''}`} 
             alt='Ball JS'
           />
-          <div className='glowing-circle'></div>
+          <div className={`glowing-circle ${isOutOf ? 'glowing-circle-animate' : ''}`}></div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

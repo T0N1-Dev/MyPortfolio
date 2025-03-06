@@ -40,6 +40,7 @@ const projects = [
       { logo: "https://img.icons8.com/ios-filled/250/jquery.png", name: "jQuery" },
       { logo: "https://img.icons8.com/color/480/postgreesql.png", name: "PostgreSQL" },
       { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740587913/sqlite-svgrepo-com_cdkqos.svg", name: "SQLite" },
+      { logo: "https://img.icons8.com/color-glass/480/bootstrap.png", name: "Bootstrap" }
     ]
   },
   {
@@ -63,9 +64,9 @@ const projects = [
   }
 ];
 
-export const Projects = () => {
+export const Projects = ({ projectsRef }) => {
   return (
-    <section className="projects-section">
+    <section className="projects-section" ref={projectsRef}>
       <h2><span>Some</span> <span className='projects-title'>Projects</span></h2>
       <div className="projects-grid">
         {projects.map((project) => (
