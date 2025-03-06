@@ -218,4 +218,18 @@
     transform: translateX(20px);
   }
 }
+
+@media (max-width: 950px) {
+  .contact-me-img-container {
+    display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    margin: 0;
+  }
+}
   

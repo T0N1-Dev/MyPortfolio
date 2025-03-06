@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import { VantaFogBackground } from '../components/VantaFogBackground'
 import { ParticlesBackground } from '../components/ParticlesBackground'
+import { useSmoothScroll } from "../hooks/useSmoothScroll";
 import '../assets/css/pages/home.css';
 
-export const Home = ({ homeRef }) => {
+
+export const Home = ({ homeRef, contactRef }) => {
   const arrowRef = useRef(null);
+  const handleSmoothScroll = useSmoothScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,8 +67,8 @@ export const Home = ({ homeRef }) => {
               Feel free to contact me so we can work together! 🤝
             </p>
             <div className="buttons-container">
-              <button className="btn resume-btn">View Resume</button>
-              <button className="btn contact-btn">Contact Me</button>
+              <button className="btn resume-btn">Download CV</button>
+              <button className="btn contact-btn" onClick={(e) => handleSmoothScroll(e, contactRef, 60)}>Contact Me</button>
             </div>
           </div>
           <img 

@@ -3,7 +3,7 @@ footer {
     width: 100%;
     background: #120425;
     min-height: 100px;
-    padding: 20px 50px;
+    padding: 20px 0;
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -20,6 +20,10 @@ footer .menu
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+}
+
+footer .social_icon {
+    gap: 1.5rem;
 }
 
 footer .social_icon li, 
@@ -116,5 +120,20 @@ footer .wave#wave4 {
     }
     to {
         background-position-x: 1000px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    footer .social_icon, 
+    footer .menu
+    {
+        padding: 0;
+    }
+
+    footer p {
+        margin-top: 15px;
+        margin: 0 0 10px 0;
+        font-size: 1em;
     }
 }

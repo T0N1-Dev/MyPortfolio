@@ -1,16 +1,14 @@
 import React from 'react';
 import '../assets/css/components/footer.css';
+import { useSmoothScroll } from "../hooks/useSmoothScroll";
+import { useWindowSize } from '../hooks/useWindowSize';
 
-export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef = 0 }) => {
+export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
+  const handleScroll = useSmoothScroll();
+  const isMobile = useWindowSize();
 
-  const handleScroll = (e, ref, scrollNumber) => {
-    e.preventDefault();
-    
-    if (ref.current) {
-      const topPosition = ref.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: topPosition - scrollNumber, behavior: 'smooth' });
-    }
-  }
+  let offsetProjects = isMobile ? 0 : 300;
+
   
   return (
     <footer>
@@ -51,11 +49,11 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef = 0 }) => {
       </ul>
       <ul className='menu'>
         <li><a href='#home' onClick={(e) => handleScroll(e, homeRef, 100)}>Home</a></li>
-        <li><a href='#projects' onClick={(e) => handleScroll(e, projectsRef, 300)}>Projects</a></li>
+        <li><a href='#projects' onClick={(e) => handleScroll(e, projectsRef, offsetProjects)}>Projects</a></li>
         <li><a href='#about' onClick={(e) => handleScroll(e, aboutRef, 0)}>About</a></li>
         <li><a href='#contact' onClick={(e) => handleScroll(e, contactRef, 60)}>Contact</a></li>
       </ul>
-      <p>Developed by T0N1 - Last update 2024</p>
+      <p>Developed by T0N1 - Updated in February 2024</p>
     </footer>
   )
 }

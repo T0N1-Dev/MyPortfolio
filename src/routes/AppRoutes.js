@@ -16,7 +16,7 @@ export const AppRoutes = () => {
   return (
     <>
       <Navbar projectsRef={projectsRef} aboutRef={aboutRef} contactRef={contactRef} />
-      <Home homeRef={homeRef} />
+      <Home homeRef={homeRef} contactRef={contactRef} />
       <Projects projectsRef={projectsRef} />
       <Slider />
       <About aboutRef={aboutRef} />
