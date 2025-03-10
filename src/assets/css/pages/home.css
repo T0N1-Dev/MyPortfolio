@@ -200,6 +200,7 @@ p {
   object-fit: "cover";
   width: 85%;
   height: auto;
+  max-width: 600px;
   border-radius: 15%;
   margin-left: auto;
 
@@ -268,6 +269,7 @@ p {
     max-width: 300px;
     margin: 0 auto;
     order: -1;
+    visibility: visible;
 
     animation: fadeOut-right-movile linear both;
     animation-timeline: scroll(root);
@@ -282,6 +284,7 @@ p {
     max-width: 100%;
     min-height: 200px;
     margin-top: 0;
+    visibility: visible;
 
     animation: fadeOut-left-movile linear both;
     animation-timeline: scroll(root);

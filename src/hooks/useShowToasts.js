@@ -6,7 +6,8 @@ export const useShowToasts = () => {
 
     const showToast = (type, title, message, imgURL, duration) => {
         setToast({ type, title, message, imgURL });
-        setTimeout(() => setToast(null), duration);
+        const timeOut = setTimeout(() => setToast(null), duration);
+        window.addEventListener("pagehide", () => clearTimeout(timeOut));
       };
 
       return [ toast, showToast ];

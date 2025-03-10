@@ -1,6 +1,4 @@
 import React, { lazy, Suspense, useEffect, useRef } from 'react'
-// import { VantaFogBackground } from '../components/VantaFogBackground'
-// import { ParticlesBackground } from '../components/ParticlesBackground'
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
 import '../assets/css/pages/home.css';
 import { useShowToasts } from '../hooks/useShowToasts';
@@ -16,12 +14,14 @@ export const Home = ({ homeRef, contactRef }) => {
   const handleCVdownload = () => {
     showToast('info', 'Sending...', 'Your request is processing', 'https://img.icons8.com/color/480/info--v1.png', 4000);
   
-    setTimeout(() => {
+    const timeOut = setTimeout(() => {
       // Wait a brief moment after hide the first toast before show the next
       setTimeout(() => {
         showToast('success', 'Success!', 'Message sent successfully', 'https://img.icons8.com/color/480/ok--v1.png', 4000);
       }, 100); // Short wait to ensure re-rendering
     }, 4000);
+
+    window.addEventListener("pagehide", () => clearTimeout(timeOut));
   };
   
 
@@ -99,7 +99,7 @@ export const Home = ({ homeRef, contactRef }) => {
             <div className='name-tag'>
               <span>Antonio Cruz</span>
             </div>
-            <p>
+            <p fetchpriority="high">
               Hey there! 👋 I'm a software developer with over two years of experience in coding. 
               I have a degree in Computer Engineering and a strong background in Python, React, relational & non-relational databases, 
               software architecture, cloud deployments and testing.
@@ -119,6 +119,12 @@ export const Home = ({ homeRef, contactRef }) => {
           </div>
           <img 
             src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739068069/erasebg-transformed_aelxmt.webp" 
+            srcSet="
+              https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739068069/erasebg-transformed_aelxmt.webp 100w,
+              https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739068069/erasebg-transformed_aelxmt.webp 200w,
+              https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739068069/erasebg-transformed_aelxmt.webp 300w
+            "
+            sizes="(max-width: 600px) 100px, (max-width: 1200px) 200px, 300px"
             className="avatar-image"
             alt="My avatar"
             width="300" height="300"

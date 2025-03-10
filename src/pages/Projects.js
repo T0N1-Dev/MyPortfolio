@@ -74,6 +74,12 @@ export const Projects = ({ projectsRef }) => {
             <div className="project-image-container">
               <img
                 src={project.image}
+                srcSet={`
+                  ${project.image} 50w,
+                  ${project.image} 100w,
+                  ${project.image} 200w
+                  `}
+                sizes="(max-width: 600px) 50px, (max-width: 1200px) 100px, 200px"
                 className="project-image"
                 alt={project.alt}
                 width="200" height="200"
@@ -94,12 +100,17 @@ export const Projects = ({ projectsRef }) => {
                   {project.technologies.map((tech, index) => (
                     <div key={index} className="technology">
                       <img 
-                        src={tech.logo} 
-                        alt={`${tech.name} logo`} 
+                        src={tech.logo}
+                        srcSet={`
+                          ${tech.logo} 20w,
+                          ${tech.logo} 50w,
+                          ${tech.logo} 100w
+                        `}
+                        sizes="(max-width: 600px) 20px, (max-width: 1200px) 50px, 100px" 
                         className="technology-logo"
+                        alt={`${tech.name} logo`} 
+                        width="100" height="100"
                         loading='lazy'
-                        width="100"
-                        height="100"
                       />
                       <span className="technology-name">{tech.name}</span>
                     </div>
