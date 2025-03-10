@@ -8,11 +8,8 @@ export const About = ({ aboutRef }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolledPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      if ((scrolledPercentage >= 50) !== isScrolled) {
-        setIsScrolled(scrolledPercentage >= 50);
-      } else if ((scrolledPercentage >= 70) !== isOutOf) {
-        setIsOutOf(scrolledPercentage >= 70);
-      }
+      setIsScrolled(scrolledPercentage >= 50);
+      setIsOutOf(scrolledPercentage >= 70);
     };
   
     window.addEventListener('scroll', handleScroll);
@@ -40,26 +37,36 @@ export const About = ({ aboutRef }) => {
             src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279189/About_Me_s6rz76.png"
             className='about-me-image'
             alt="About Me"
+            width="400" height="400"
+            loading='lazy'
           />
           <img 
             src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279168/Ball_Code_1_suixzv.png'
             className='ball about-me-image-ballCode'
             alt='Ball Code'
+            width="50" height="50"
+            loading='lazy'
           />
           <img 
             src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741019217/Ball_CSS_byzw6t.png'
             className={`ball about-me-image-ballCSS ${isScrolled ? 'animate-ball' : ''}`} 
             alt='Ball CSS'
+            width="50" height="50"
+            loading='lazy'
           />
           <img 
             src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279170/Ball_HTML_1_jkjg9t.png'
             className={`ball about-me-image-ballHTML ${isScrolled ? 'animate-ball' : ''}`}
             alt='Ball HTML'
+            width="50" height="50"
+            loading='lazy'
           />
           <img 
             src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741019217/Ball_JS_hwafir.png'
             className={`ball about-me-image-ballJS ${isScrolled ? 'animate-ball' : ''}`} 
             alt='Ball JS'
+            width="50" height="50"
+            loading='lazy'
           />
           <div className={`glowing-circle ${isOutOf ? 'glowing-circle-animate' : ''}`}></div>
         </div>

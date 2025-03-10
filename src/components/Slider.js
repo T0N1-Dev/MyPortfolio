@@ -80,7 +80,6 @@ const technologies = [
 ]
 
 export const Slider = () => {
-    console.log('Slider Rendered');
   return (
     <div className="wrapper">
         {technologies.map((technology, index) => (
@@ -89,7 +88,7 @@ export const Slider = () => {
                 className={`item ${'item' + technology.id}`}
                 style={{ '--item': index + 1 }}
             >
-                <img src={technology.img} alt={`${technology.name}-icon`} className='technology-slider'/>
+                <img src={technology.img} alt={`${technology.name}-icon`} className='technology-slider' width="50" height="50" loading='lazy'/>
             </div>
         ))}
     </div>

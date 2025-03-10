@@ -149,6 +149,7 @@
   max-width: 300px;
   opacity: 0;
   animation: fadeInToast 0.5s forwards, fadeOutToast 0.5s 3.5s forwards;
+  z-index: 2;
 }
 
 .toast img.toast-icon {

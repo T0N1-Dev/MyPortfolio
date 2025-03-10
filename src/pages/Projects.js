@@ -74,16 +74,18 @@ export const Projects = ({ projectsRef }) => {
             <div className="project-image-container">
               <img
                 src={project.image}
-                alt={project.alt}
                 className="project-image"
+                alt={project.alt}
+                width="200" height="200"
+                loading='lazy'
               />
             </div>
             <div className="project-content">
               <div className='project-header'>
                 <h3 className="project-title">{project.title}</h3>
                 <div className='project-links'>
-                  <a href={project.link}><img src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1740676850/link-svgrepo-com_1_ucixbm.svg' alt='Demo Icon' className='icon' /></a>
-                  <a href={project.github}><img src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1740676850/github-142-svgrepo-com_on77o9.svg' alt='Github Icon' className='icon' /></a>
+                  <a href={project.link}><img src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1740676850/link-svgrepo-com_1_ucixbm.svg' alt='Demo Icon' className='icon' loading='lazy' width="10" height="10"/></a>
+                  <a href={project.github}><img src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1740676850/github-142-svgrepo-com_on77o9.svg' alt='Github Icon' className='icon' loading='lazy' width="10" height="10"/></a>
                 </div>
               </div>
               <p className="project-description">{project.description}</p>
@@ -95,6 +97,9 @@ export const Projects = ({ projectsRef }) => {
                         src={tech.logo} 
                         alt={`${tech.name} logo`} 
                         className="technology-logo"
+                        loading='lazy'
+                        width="100"
+                        height="100"
                       />
                       <span className="technology-name">{tech.name}</span>
                     </div>

@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'Retro';
-  src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
+  src: url('/src/assets/fonts/Retro\ Floral.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -15,7 +18,7 @@
 }
 
 h2 {
-  font-family: 'Retro', sans-serif;
+  font-family: 'Retro', Arial, Helvetica, sans-serif;
   font-size: 5rem;
   font-weight: bold;
   margin: 0;

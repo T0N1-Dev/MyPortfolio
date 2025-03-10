@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../assets/css/pages/contact.css';
 import emailjs from '@emailjs/browser';
 import { useForm } from '../hooks/useForm';
+import { useShowToasts } from '../hooks/useShowToasts';
 
 export const Contact = ({ contactRef }) => {
 
@@ -10,8 +11,8 @@ export const Contact = ({ contactRef }) => {
     email: '',
     message: ''
   });
+  const [toast, showToast] = useShowToasts();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [toast, setToast] = useState(null);
   const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
@@ -22,11 +23,6 @@ export const Contact = ({ contactRef }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const showToast = (type, title, message, imgURL, duration) => {
-    setToast({ type, title, message, imgURL });
-    setTimeout(() => setToast(null), duration);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,15 +50,18 @@ export const Contact = ({ contactRef }) => {
 
   return (
     <section className="contact-container" ref={contactRef}>
-      {toast && (
-        <div className={`toast toast-${toast.type}`}>
-          <img src={toast.imgURL} alt={toast.type} className="toast-icon" />
-          <div>
-            <strong>{toast?.title}</strong>
-            <p>{toast?.message}</p>
+      
+      <div className='toast-container'>
+        {toast && (
+          <div className={`toast toast-${toast.type}`}>
+            <img src={toast.imgURL} alt={toast.type} className="toast-icon" width="20" height="20" />
+            <div>
+              <strong>{toast?.title}</strong>
+              <p>{toast?.message}</p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <h1 className='contact-title'><span>Contact</span> <span className='me'>Me</span></h1>
@@ -80,14 +79,14 @@ export const Contact = ({ contactRef }) => {
           required
         />
 
-        <input
+        <input 
           type="email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
           className="form-input"
-          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           onInvalid={(e) => e.target.setCustomValidity("Your email is not correct, please check. (example@gmail.com)")}
           onInput={(e) => {
             e.target.setCustomValidity("");
@@ -97,6 +96,7 @@ export const Contact = ({ contactRef }) => {
           }} 
           required
         />
+
 
         <textarea
           name="message"
@@ -120,26 +120,36 @@ export const Contact = ({ contactRef }) => {
           src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279176/Contact_Me_l5waxg.png" 
           alt="Contact Me"
           className="contact-image"
+          loading='lazy'
+          width="200" height="200"
         />
         <img 
           src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279170/Message_tslghp.png"
           alt="Messages"
           className={`floating-img messages-img ${isScrolled ? 'messages-img-animate' : ''}`}
+          loading='lazy'
+          width="50" height="50"
         />
         <img 
           src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120204/New_Project_jpme2g.png'
           alt='Doubt'
           className={`floating-img doubt-img ${isScrolled ? 'doubt-img-animate' : ''}`}
+          loading='lazy'
+          width="50" height="50"
         />
         <img 
           src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120206/New_Project_1_pm42hh.png'
           alt='Phone-Call'
           className={`floating-img phone-call-img ${isScrolled ? 'phone-call-img-animate' : ''}`}
+          loading='lazy'
+          width="50" height="50"
         />
         <img 
           src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279168/Calendar_bz3bw7.png'
           alt='Calendar'
           className={`floating-img calendar-img ${isScrolled ? 'calendar-img-animate' : ''}`}
+          loading='lazy'
+          width="50" height="50"
         />
       </div>
     </section>

@@ -1,11 +1,17 @@
 @font-face {
   font-family: 'Retro';
-  src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
+  src: url('/src/assets/fonts/Retro\ Floral.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('/src/assets/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
+  src: url('/src/assets/fonts/OpenSans_Condensed-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-size: normal;
+  font-display: swap;
 }
 
 :root {
@@ -14,7 +20,7 @@
 
 html, body {
   color: white;
-  font-family: 'OpenSans';
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
   min-width: 100vw;
@@ -44,9 +50,14 @@ html, body {
   z-index: -1;
 }
 
+.toast-container {
+  position: fixed;
+  min-height: 80px;
+}
+
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   height: auto;
   box-sizing: border-box;
@@ -66,7 +77,7 @@ html, body {
 }
 
 h1 {
-  font-family: 'Retro', sans-serif;
+  font-family: 'Retro', Arial, Helvetica, sans-serif;
   font-size: 4.5rem;
   font-weight: bold;
   margin: 0;
@@ -93,7 +104,7 @@ h1 {
 }
 
 .name-tag span {
-  font-family: 'Retro', sans-serif;
+  font-family: 'Retro', Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   min-width: 100px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -113,7 +124,7 @@ p {
 .btn {
   padding: 12px 20px;
   font-weight: bold;
-  font-family: 'Retro', sans-serif;
+  font-family: 'Retro', Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
   border: none;
@@ -122,10 +133,11 @@ p {
 }
 
 .resume-btn {
+  text-decoration: none;
+  font-size: smaller;
   margin-right: 10px;
   background: var(--titles-color);
   color: inherit;
-  letter-spacing: 1.5px;
 }
 
 .contact-btn {
@@ -185,9 +197,11 @@ p {
 }
 
 .avatar-image {
-  max-width: 500px;
+  object-fit: "cover";
+  width: 85%;
+  height: auto;
   border-radius: 15%;
-  margin-right: auto;
+  margin-left: auto;
 
   animation: fadeOut-right linear both;
   animation-timeline: scroll(root);
@@ -204,9 +218,13 @@ p {
   animation-range: 0 200px;
 }
 
+.toast.toast-home {
+  top: 100px;
+}
+
 @keyframes fadeOut-left {
   to {
-      transform: scale(0) translateY(70vh) translateX(-200vw) ;
+      transform: scale(0) translateY(70vh) translateX(-250vw) ;
   }
 }
 
@@ -218,7 +236,7 @@ p {
 
 @keyframes fadeOut-right {
   to {
-      transform: scale(0) translateY(70vh) translateX(200vw);
+      transform: scale(0) translateY(70vh) translateX(250vw);
   }
 }
 
@@ -262,6 +280,7 @@ p {
 
   .text-content {
     max-width: 100%;
+    min-height: 200px;
     margin-top: 0;
 
     animation: fadeOut-left-movile linear both;

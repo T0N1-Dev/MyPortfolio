@@ -1,13 +1,29 @@
-import React, { useEffect, useRef } from 'react'
-import { VantaFogBackground } from '../components/VantaFogBackground'
-import { ParticlesBackground } from '../components/ParticlesBackground'
+import React, { lazy, Suspense, useEffect, useRef } from 'react'
+// import { VantaFogBackground } from '../components/VantaFogBackground'
+// import { ParticlesBackground } from '../components/ParticlesBackground'
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
 import '../assets/css/pages/home.css';
+import { useShowToasts } from '../hooks/useShowToasts';
 
+const VantaFogBackground = lazy(() => import("../components/VantaFogBackground"));
+const ParticlesBackground = lazy(() => import("../components/ParticlesBackground"));
 
 export const Home = ({ homeRef, contactRef }) => {
   const arrowRef = useRef(null);
   const handleSmoothScroll = useSmoothScroll();
+  const [toast, showToast] = useShowToasts();
+
+  const handleCVdownload = () => {
+    showToast('info', 'Sending...', 'Your request is processing', 'https://img.icons8.com/color/480/info--v1.png', 4000);
+  
+    setTimeout(() => {
+      // Wait a brief moment after hide the first toast before show the next
+      setTimeout(() => {
+        showToast('success', 'Success!', 'Message sent successfully', 'https://img.icons8.com/color/480/ok--v1.png', 4000);
+      }, 100); // Short wait to ensure re-rendering
+    }, 4000);
+  };
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +62,36 @@ export const Home = ({ homeRef, contactRef }) => {
   return (
     <>
       <section className='home-section' ref={homeRef}>
+        
+        <div className='toast-container'>
+          {toast && (
+            <div className={`toast toast-home toast-${toast.type}`}>
+              <img 
+                src={toast.imgURL} 
+                className="toast-icon" 
+                alt={toast.type}
+                width="20" height="20"
+              />
+              <div>
+                <strong>{toast?.title}</strong>
+                <p>{toast?.message}</p>
+              </div>
+            </div>
+          )}
+        </div>
+        
         <div className='background-layer'>
-          <VantaFogBackground />
+          <Suspense fallback={<div className="loader"></div>}>
+            <VantaFogBackground />
+          </Suspense>
         </div>
 
         <div className='particles-layer'>
-          <ParticlesBackground />
+          <Suspense fallback={<div className="loader"></div>}>
+            <ParticlesBackground />
+          </Suspense>
         </div>
+
 
         <div className='container'>
           <div className='text-content'>
@@ -66,15 +105,24 @@ export const Home = ({ homeRef, contactRef }) => {
               software architecture, cloud deployments and testing.
               Feel free to contact me so we can work together! 🤝
             </p>
-            <div className="buttons-container">
-              <button className="btn resume-btn">Download CV</button>
+            <div className="buttons-container">  
+              <a 
+                href="https://drive.google.com/uc?export=download&id=1y3bqK7xJEe3SIzKoWmu6BTJnYV_SXv00" 
+                download="Antonio_Cruz_CV.pdf" 
+                className="btn resume-btn"
+                onClick={handleCVdownload}
+              >
+                Download CV
+              </a>
               <button className="btn contact-btn" onClick={(e) => handleSmoothScroll(e, contactRef, 60)}>Contact Me</button>
             </div>
           </div>
           <img 
-            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1739068069/erasebg-transformed_aelxmt.webp" 
+            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739068069/erasebg-transformed_aelxmt.webp" 
             className="avatar-image"
             alt="My avatar"
+            width="300" height="300"
+            loading='lazy'
           />
         </div>
 

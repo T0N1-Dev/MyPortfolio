@@ -1,12 +1,18 @@
 @font-face {
     font-family: 'Overcame';
-    src: url('/src/assets/fonts/OvercameDemoBold.ttf') format('truetype');
+    src: url('/src/assets/fonts/OvercameDemoBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Retro';
-    src: url('/src/assets/fonts/Retro\ Floral.otf') format('truetype');
-}
+    src: url('/src/assets/fonts/Retro\ Floral.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
 @keyframes fadeOut {
     to {
@@ -55,7 +61,7 @@
     border: 0;
     color: inherit;
     cursor: pointer;
-    font-family: 'Retro', sans-serif;
+    font-family: 'Retro', Arial, Helvetica, sans-serif;
     font-size: 18px;
     transition: color 0.3s;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -80,7 +86,7 @@
 .logo {
     cursor: default;
     color: inherit;
-    font-family: 'Overcame', sans-serif;
+    font-family: 'Overcame', Arial, Helvetica, sans-serif;
     font-size: 65px;
     align-items: center;
     transition: color 0.1s ease-in;  
@@ -93,13 +99,9 @@
     color: rgb(201, 4, 4);
 }
 
-.github-icon, .stackOverflow-icon {
-    scale: 1.2;
-}
-
 .social-icon {
-    width: 40px; 
-    height: 40px;
+    width: 50px; 
+    height: auto;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
 }

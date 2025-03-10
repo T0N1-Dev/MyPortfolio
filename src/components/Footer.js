@@ -9,7 +9,6 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
 
   let offsetProjects = isMobile ? 0 : 300;
 
-  
   return (
     <footer>
       <div className='waves'>
@@ -25,6 +24,7 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
               src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739393021/images_1_lijyvr.png" 
               alt="LinkedIn" 
               className="social-icon"
+              loading='lazy'
             />
           </a>
         </li>
@@ -34,6 +34,7 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
               src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739393991/github_ualv1s.png" 
               alt="GitHub" 
               className="social-icon github-icon"
+              loading='lazy'
             />
           </a>
         </li>
@@ -43,6 +44,7 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
               src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739393797/Stack_Overflow_icon.svg_vau8u7.png" 
               alt="Stack Overflow" 
               className="social-icon stackOverflow-icon"
+              loading='lazy'
             />
           </a>
         </li>
@@ -53,7 +55,7 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
         <li><a href='#about' onClick={(e) => handleScroll(e, aboutRef, 0)}>About</a></li>
         <li><a href='#contact' onClick={(e) => handleScroll(e, contactRef, 60)}>Contact</a></li>
       </ul>
-      <p>Developed by T0N1 - Updated in February 2024</p>
+      <p>Developed by T0N1 - Updated in February 2025</p>
     </footer>
   )
 }

@@ -2,8 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import * as THREE from "three"; 
 import FOG from "vanta/dist/vanta.fog.min";
 
-export const VantaFogBackground = () => {
-  console.log('VantaFogBackground component rendered!');
+export default function VantaFogBackground() {
     const myRef = useRef(null);
     const vantaRef = useRef(null); 
   
