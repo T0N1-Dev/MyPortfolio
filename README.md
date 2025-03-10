@@ -10,11 +10,10 @@ I tried to create it in an eye-catching way, it is full of animations, check it 
 - **Particles.js** 🎆  
 
 ## 📸 Preview
-![Portfolio Screenshot](https://res.cloudinary.com/dmfs1od9n/image/upload/v1741632352/Portfolio_kyesre.png)
+![Portfolio Screenshot](https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741632352/Portfolio_kyesre.png)
 
-📬 Contact Me
-Feel free to reach out if you'd like to collaborate or learn more about my work! 🤝
-📧 Email: antoniocruzglez24@gmail.com
-💼 X: https://x.com/T0N1_DEV
+## 📬 Contact Me
+📧 **Email:** antoniocruzglez24@gmail.com
+💼 **X:** https://x.com/T0N1_DEV
 
-By T0N1 ❤️ 
+By **T0N1** ❤️ 
