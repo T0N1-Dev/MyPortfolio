@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.43eae211.css",
+    "main.js": "/static/js/main.5c86ca8e.js",
+    "static/js/307.c96b9695.chunk.js": "/static/js/307.c96b9695.chunk.js",
+    "static/js/338.b5d4df45.chunk.js": "/static/js/338.b5d4df45.chunk.js",
+    "static/js/878.18a72728.chunk.js": "/static/js/878.18a72728.chunk.js",
+    "static/js/956.80a1641a.chunk.js": "/static/js/956.80a1641a.chunk.js",
+    "static/media/OpenSans_Condensed-Regular.woff2": "/static/media/OpenSans_Condensed-Regular.bb1bc622aa23dc3357bf.woff2",
+    "static/media/OvercameDemoBold.woff2": "/static/media/OvercameDemoBold.0074f3812d805587130d.woff2",
+    "static/media/Retro Floral.woff2": "/static/media/Retro Floral.fc8596fc6b31bbf07f9b.woff2",
+    "index.html": "/index.html",
+    "main.43eae211.css.map": "/static/css/main.43eae211.css.map",
+    "main.5c86ca8e.js.map": "/static/js/main.5c86ca8e.js.map",
+    "307.c96b9695.chunk.js.map": "/static/js/307.c96b9695.chunk.js.map",
+    "338.b5d4df45.chunk.js.map": "/static/js/338.b5d4df45.chunk.js.map",
+    "878.18a72728.chunk.js.map": "/static/js/878.18a72728.chunk.js.map",
+    "956.80a1641a.chunk.js.map": "/static/js/956.80a1641a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43eae211.css",
+    "static/js/main.5c86ca8e.js"
+  ]
+}
