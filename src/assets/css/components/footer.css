@@ -131,6 +131,14 @@ footer .wave#wave4 {
         padding: 0;
     }
 
+    footer .github-icon,
+    footer .X,
+    footer .stackOverflow-icon {
+        width: 40px;
+        height: auto;
+    }
+
+
     footer p {
         margin-top: 15px;
         margin: 0 0 10px 0;

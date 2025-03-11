@@ -19,11 +19,12 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
       </div>
       <ul className='social_icon'>
         <li>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/T0N1_DEV" target="_blank" rel="noopener noreferrer">
             <img 
-              src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739393021/images_1_lijyvr.png" 
-              alt="LinkedIn" 
-              className="social-icon"
+              src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1741376230/icons8-x-500_s5myo7.png" 
+              className="social-icon X"
+              alt="X" 
+              width="20" height="20"
               loading='lazy'
             />
           </a>
@@ -41,9 +42,10 @@ export const Footer = ({ homeRef, aboutRef, contactRef, projectsRef }) => {
         <li>
           <a href="https://stackoverflow.com/users/22050198/antonio-cruz" target="_blank" rel="noopener noreferrer">
             <img 
-              src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1739393797/Stack_Overflow_icon.svg_vau8u7.png" 
-              alt="Stack Overflow" 
+              src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1741376701/icons8-stack-overflow-500_m1vojm.png" 
               className="social-icon stackOverflow-icon"
+              alt="Stack Overflow"
+              width="20" height="20" 
               loading='lazy'
             />
           </a>

@@ -27,8 +27,8 @@ h2 {
   transform: translateY(-85vh) scale(0);
 
   animation: fadeIn linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 35vh;
+  animation-timeline: scroll(root block) !important;
+  animation-range: 0 35vh !important;
 }
 
 .projects-title {
@@ -55,8 +55,8 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   animation: fadeIn-card linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 35vh;
+  animation-timeline: scroll(root block) !important;
+  animation-range: 0 35vh !important;
 }
 
 .project-header {
@@ -214,8 +214,8 @@ h2 {
       margin-bottom: 20px;
       transform: translateY(0) scale(1);
       animation: fadeIn-right-movile linear both;
-      animation-timeline: scroll(root block);
-      animation-range: 0 300px;
+      animation-timeline: scroll(root block) !important;
+      animation-range: 0 300px !important;
   }
 
   .projects-section {
@@ -238,20 +238,20 @@ h2 {
 
   .project-card:first-child {
     animation: fadeIn-left-movile linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 70vh;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 70vh !important;
   }
 
   .project-card:nth-child(2) {
     animation: fadeIn-right-movile linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 140vh;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 140vh !important;
   }
 
   .project-card:last-child {
     animation: fadeIn-left-movile linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 210vh;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 210vh !important;
   }
 
   .icon {

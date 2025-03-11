@@ -30,7 +30,7 @@
     z-index: 2;
 
     animation: fadeOut linear both;
-    animation-timeline: scroll(root);
+    animation-timeline: scroll(root) !important;
 }
 
 .nav-left {
@@ -152,24 +152,13 @@
     }
 
     .social-icon {
-        width: 30px;
-        height: 30px;
+        margin-top: 5px;
+        width: 35px;
+        height: auto;
     }
 
     .logo {
         display: none;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .nav-link {
-        font-size: 14px;
-    }
-
-    .social-icon {
-        width: 28px;
-        height: 28px;
     }
 }
 

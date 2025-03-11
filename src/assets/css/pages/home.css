@@ -50,11 +50,6 @@ html, body {
   z-index: -1;
 }
 
-.toast-container {
-  position: fixed;
-  min-height: 80px;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -72,8 +67,8 @@ html, body {
   margin: 4.5rem 0 0 1rem;
 
   animation: fadeOut-left linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 80vh;
+  animation-timeline: scroll(root block) !important;
+  animation-range: 0 80vh !important;
 }
 
 h1 {
@@ -205,8 +200,8 @@ p {
   margin-left: auto;
 
   animation: fadeOut-right linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 500px;
+  animation-timeline: scroll(root block) !important;
+  animation-range: 0 500px !important;
 }
 
 .bounce {
@@ -215,8 +210,8 @@ p {
 
 .fade-out {
   animation: fade-Out linear both;
-  animation-timeline: scroll(root);
-  animation-range: 0 200px;
+  animation-timeline: scroll(root block) !important;
+  animation-range: 0 200px !important;
 }
 
 .toast.toast-home {
@@ -272,8 +267,8 @@ p {
     visibility: visible;
 
     animation: fadeOut-right-movile linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 300px;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 300px !important;
   }
 
   .name-tag {
@@ -287,8 +282,8 @@ p {
     visibility: visible;
 
     animation: fadeOut-left-movile linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 300px;
+    animation-timeline: scroll(root) !important;
+    animation-range: 0 300px !important;
   }
 
   h1 {
@@ -330,7 +325,7 @@ p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   h1 {
     font-size: 2rem;
   }
@@ -342,5 +337,18 @@ p {
   .btn {
     padding: 6px 12px;
     font-size: 0.7rem;
+    transition: transform .5s ease;
+  }
+
+  .btn::before, .btn::after {
+    display: none;
+  }
+
+  .btn:hover {
+    color: inherit; 
+    background: var(--titles-color); 
+    box-shadow: none;
+    transition-delay: 0s;
+    transform: translateY(5px);
   }
 }

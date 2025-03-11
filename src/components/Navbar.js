@@ -85,6 +85,13 @@ export const Navbar = ({ projectsRef, aboutRef, contactRef }) => {
           <button className="nav-link animate__animated animate__fadeInDown" onClick={(e) => handleScroll(e, contactRef)}>Contact</button>
         </div>
       )}
+      { isMobile && !isOpen && (
+          <div className="mobile-menu">
+            <button className="nav-link animate__animated animate__fadeOutUp animate__faster">Projects</button>
+            <button className="nav-link animate__animated animate__fadeOutUp animate__fast">About</button>
+            <button className="nav-link animate__animated animate__fadeOutUp">Contact</button>
+          </div>
+      )}
     </nav>
   )
 }
