@@ -198,7 +198,7 @@ h2 {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 401px) {
+@media (max-width: 1024px) and (min-width: 440px) {
   .project-technologies.animate {
     animation: none;
   }
@@ -259,15 +259,25 @@ h2 {
     height: 1.3rem;
   }
 
+  .icon:hover {
+    transform: scale(1.1);
+  }
+
   .project-technologies {
     gap: .4rem;
   }
 
   :root {
-    --technology-distance-left: -55px;
+    --technology-distance-left: -10vw;
   }
 
   .technology-name {
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --technology-distance-left: -16vw;
   }
 }
