@@ -100,10 +100,14 @@
 }
 
 .social-icon {
-    width: 50px; 
+    width: 3rem; 
     height: auto;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
+}
+
+.social-icon.linkedIn-icon {
+    width: 3.2rem;
 }
 
 .social-icon:hover {

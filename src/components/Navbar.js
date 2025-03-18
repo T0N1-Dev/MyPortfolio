@@ -49,11 +49,20 @@ export const Navbar = ({ projectsRef, aboutRef, contactRef }) => {
       </div>
 
       <div className="nav-right">
-        <a href="https://x.com/T0N1_DEV" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/antonio-cruz-421993355" target="_blank" rel="noopener noreferrer">
           <img 
-            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1741376230/icons8-x-500_s5myo7.png" 
-            className="social-icon"
-            alt="X" 
+            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1742313812/icons8-linkedin-512_rswclc.png" 
+            className="social-icon linkedIn-icon"
+            alt="Linked-In" 
+            width="20" height="20"
+            loading='lazy'
+          />
+        </a>
+        <a href="https://github.com/T0N1-Dev" target="_blank" rel="noopener noreferrer">
+          <img 
+            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739393991/github_ualv1s.png" 
+            className="social-icon github-icon"
+            alt="GitHub" 
             width="20" height="20"
             loading='lazy'
           />
@@ -64,15 +73,6 @@ export const Navbar = ({ projectsRef, aboutRef, contactRef }) => {
             className="social-icon stackOverflow-icon"
             alt="Stack Overflow"
             width="20" height="20" 
-            loading='lazy'
-          />
-        </a>
-        <a href="https://github.com/T0N1-Dev" target="_blank" rel="noopener noreferrer">
-          <img 
-            src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1739393991/github_ualv1s.png" 
-            className="social-icon github-icon"
-            alt="GitHub" 
-            width="20" height="20"
             loading='lazy'
           />
         </a>

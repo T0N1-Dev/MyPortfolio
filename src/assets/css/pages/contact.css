@@ -67,7 +67,9 @@
 
   button.btn.btn-form:hover::before, 
   button.btn.btn-form:hover::after {
-    height: 80%;
+    
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   
   .contact-me-img-container {
