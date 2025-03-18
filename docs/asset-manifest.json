@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.78810dbb.css",
-    "main.js": "/MyPortfolio/static/js/main.a5c9ba1f.js",
+    "main.css": "/MyPortfolio/static/css/main.358b9fdb.css",
+    "main.js": "/MyPortfolio/static/js/main.7effef0d.js",
     "static/js/307.c96b9695.chunk.js": "/MyPortfolio/static/js/307.c96b9695.chunk.js",
     "static/js/338.b5d4df45.chunk.js": "/MyPortfolio/static/js/338.b5d4df45.chunk.js",
     "static/js/878.18a72728.chunk.js": "/MyPortfolio/static/js/878.18a72728.chunk.js",
@@ -10,15 +10,15 @@
     "static/media/OvercameDemoBold.woff2": "/MyPortfolio/static/media/OvercameDemoBold.0074f3812d805587130d.woff2",
     "static/media/Retro Floral.woff2": "/MyPortfolio/static/media/Retro Floral.fc8596fc6b31bbf07f9b.woff2",
     "index.html": "/MyPortfolio/index.html",
-    "main.78810dbb.css.map": "/MyPortfolio/static/css/main.78810dbb.css.map",
-    "main.a5c9ba1f.js.map": "/MyPortfolio/static/js/main.a5c9ba1f.js.map",
+    "main.358b9fdb.css.map": "/MyPortfolio/static/css/main.358b9fdb.css.map",
+    "main.7effef0d.js.map": "/MyPortfolio/static/js/main.7effef0d.js.map",
     "307.c96b9695.chunk.js.map": "/MyPortfolio/static/js/307.c96b9695.chunk.js.map",
     "338.b5d4df45.chunk.js.map": "/MyPortfolio/static/js/338.b5d4df45.chunk.js.map",
     "878.18a72728.chunk.js.map": "/MyPortfolio/static/js/878.18a72728.chunk.js.map",
     "956.80a1641a.chunk.js.map": "/MyPortfolio/static/js/956.80a1641a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78810dbb.css",
-    "static/js/main.a5c9ba1f.js"
+    "static/css/main.358b9fdb.css",
+    "static/js/main.7effef0d.js"
   ]
 }
