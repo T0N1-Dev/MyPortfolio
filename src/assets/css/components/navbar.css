@@ -106,10 +106,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.social-icon.linkedIn-icon {
-    width: 3.2rem;
-}
-
 .social-icon:hover {
     transform: scale(1.2);
 }

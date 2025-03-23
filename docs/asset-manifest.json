@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MyPortfolio/static/css/main.358b9fdb.css",
+    "main.css": "/MyPortfolio/static/css/main.6dbaff96.css",
     "main.js": "/MyPortfolio/static/js/main.7effef0d.js",
     "static/js/307.c96b9695.chunk.js": "/MyPortfolio/static/js/307.c96b9695.chunk.js",
     "static/js/338.b5d4df45.chunk.js": "/MyPortfolio/static/js/338.b5d4df45.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/OvercameDemoBold.woff2": "/MyPortfolio/static/media/OvercameDemoBold.0074f3812d805587130d.woff2",
     "static/media/Retro Floral.woff2": "/MyPortfolio/static/media/Retro Floral.fc8596fc6b31bbf07f9b.woff2",
     "index.html": "/MyPortfolio/index.html",
-    "main.358b9fdb.css.map": "/MyPortfolio/static/css/main.358b9fdb.css.map",
+    "main.6dbaff96.css.map": "/MyPortfolio/static/css/main.6dbaff96.css.map",
     "main.7effef0d.js.map": "/MyPortfolio/static/js/main.7effef0d.js.map",
     "307.c96b9695.chunk.js.map": "/MyPortfolio/static/js/307.c96b9695.chunk.js.map",
     "338.b5d4df45.chunk.js.map": "/MyPortfolio/static/js/338.b5d4df45.chunk.js.map",
@@ -18,7 +18,7 @@
     "956.80a1641a.chunk.js.map": "/MyPortfolio/static/js/956.80a1641a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.358b9fdb.css",
+    "static/css/main.6dbaff96.css",
     "static/js/main.7effef0d.js"
   ]
 }
