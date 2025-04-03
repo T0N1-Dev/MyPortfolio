@@ -14,6 +14,6 @@ I tried to create it in an eye-catching way, it is full of animations, check it 
 
 ## 📬 Contact Me
 📧 **Email:** antoniocruzglez24@gmail.com
-💼 **X:** https://x.com/T0N1_DEV
+💼 **LinkedIn:** https://www.linkedin.com/in/antonio-cruz-421993355 
 
 By **T0N1** ❤️ 
