@@ -23,7 +23,7 @@ export const About = ({ aboutRef }) => {
         <div className='text-content-about-me'>
           <h1><span>About</span> <span className='me'>Me</span></h1>
           <p>
-            Hi there! 👋 I'm Antonio, a junior web developer passionate about technology and software development. Ever since I was a kid, I was always in front of a computer, curious about how things worked behind the scenes. That curiosity grew over time and led me to study at Universidad Tecnológica de La Habana, where I earned my degree in Computer Engineering.
+            Hi there! 👋 I'm Antonio, a web developer passionate about technology and software development. Ever since I was a kid, I was always in front of a computer, curious about how things worked behind the scenes. That curiosity grew over time and led me to study at Universidad Tecnológica de La Habana, where I earned my degree in Computer Engineering.
 
             During my studies, I discovered my love for web development, and for my final project, I built a full-fledged web application from scratch, taking it all the way to production in just four months. This experience ignited my passion even more, and since then, I've been continuously learning and diving deeper into modern web technologies.
 
