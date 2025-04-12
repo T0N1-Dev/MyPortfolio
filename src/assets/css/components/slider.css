@@ -123,8 +123,8 @@
     }
 }
 
-@media (min-width: 1921px) {
+@media (max-height: 699px) {
     .wrapper {
-        margin-top: calc(30vh + 100px);
+        margin-top: calc(5vh + 100px);
     }
 }

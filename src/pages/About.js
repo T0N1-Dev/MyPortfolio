@@ -22,14 +22,12 @@ export const About = ({ aboutRef }) => {
       <section className='container-about-me' ref={aboutRef}>
         <div className='text-content-about-me'>
           <h1><span>About</span> <span className='me'>Me</span></h1>
-          <p>
-            Hi there! 👋 I'm Antonio, a web developer passionate about technology and software development. Ever since I was a kid, I was always in front of a computer, curious about how things worked behind the scenes. That curiosity grew over time and led me to study at Universidad Tecnológica de La Habana, where I earned my degree in Computer Engineering.
+          <p className='about-me-text'>
+            Hi! 👋 I'm Antonio, a passionate web developer with a degree in Computer Engineering from Universidad Tecnológica de La Habana. My curiosity for how things work led me to tech early on, and during my studies, I built and deployed a full web app as my final project, an experience that sparked my love for web development.
 
-            During my studies, I discovered my love for web development, and for my final project, I built a full-fledged web application from scratch, taking it all the way to production in just four months. This experience ignited my passion even more, and since then, I've been continuously learning and diving deeper into modern web technologies.
+            I'm eager to join a collaborative team where I can solve real problems, share ideas, and grow as both a developer and teammate. I value clean code, great user experiences, and continuous learning.
 
-            I'm currently looking for a collaborative and challenging work environment where I can tackle new problems, contribute innovative ideas, and keep improving both as a developer and as a team player. I strongly value code quality, customer satisfaction, teamwork, active listening, and continuous learning.
-
-            If you're looking for not just a good programmer, but also a dedicated team player who strives to make every project better than before, let's connect and start building something amazing together! 🚀
+            If you're looking for someone who’s not just skilled but also deeply committed to building great things let’s connect! 🚀
           </p>
         </div>
         <div className='about-me-images-container'>

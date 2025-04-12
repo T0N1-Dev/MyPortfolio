@@ -10,8 +10,13 @@
 }
 
 .text-content-about-me {
-    max-width: 600px;
-    margin: 4.5rem 0 0 1rem;
+    max-width: 80%;
+    margin: 3rem 0 0 1rem;
+}
+
+p.about-me-text {
+    font-size: 1.3rem;
+    color: var(--text-color);
 }
 
 .me {
@@ -19,29 +24,28 @@
 }
 
 .about-me-image {
-    width: 100vw;
+    width: 40vw;
     height: auto;
-    max-width: 500px;
-    margin: 30% auto 0 0;
+    max-width: 700px;
+    margin: 15% auto 0 0;
 }
 
 .glowing-circle {
-    width: 500px;
-    height: 500px;
-    margin: 2% auto 0 0;
+    width: clamp(300px, 40vw, 750px);
+    height: clamp(300px, 40vw, 750px);
     border-radius: 50%;
     background: radial-gradient(circle, rgba(80, 30, 130, 0.8) 20%, rgba(30, 10, 50, 0.6) 60%, rgba(10, 0, 30, 0.3) 100%);
     box-shadow: 0 0 50px rgba(80, 30, 130, 0.5);
     position: absolute;
-    top: 12%;
-    right: 10%;
+    top: clamp(0px, 3vw, 50px);
+    right: clamp(0px, 10vw, 200px);
     z-index: -1;
     animation: liquid-effect 4s linear infinite alternate;
     transition: transform 2s ease-in-out;
 }
 
 .glowing-circle-animate {
-    transform: translate(-135%, 110%) scale(1.4);
+    transform: translate(-100%, 95%) scale(1.3);
 }
 
 .ball {

@@ -71,6 +71,7 @@ export const Home = ({ homeRef, contactRef }) => {
                 className="toast-icon" 
                 alt={toast.type}
                 width="20" height="20"
+                loading="eager"
               />
               <div>
                 <strong>{toast?.title}</strong>
@@ -99,7 +100,7 @@ export const Home = ({ homeRef, contactRef }) => {
             <div className='name-tag'>
               <span>Antonio Cruz</span>
             </div>
-            <p fetchpriority="high">
+            <p className="home-text" fetchpriority="high">
               Hey there! 👋 I'm a software developer with over two years of experience in coding. 
               I have a degree in Computer Engineering and a strong background in Python, React, relational & non-relational databases, 
               software architecture, cloud deployments and testing.
@@ -128,7 +129,7 @@ export const Home = ({ homeRef, contactRef }) => {
             className="avatar-image"
             alt="My avatar"
             width="300" height="300"
-            loading='lazy'
+            loading="eager"
           />
         </div>
 
