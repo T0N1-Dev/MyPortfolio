@@ -1,15 +1,11 @@
-:root {
-    --amount-technologies: 15;
-    --transition-slider-duration: 30s;
-}
-
 .wrapper {
-    background-color: rgba(0, 0, 0, .2);
-    border-top: 1px solid #7c05d8;
-    border-bottom: 1px solid #7c05d8;
-    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vh 0;
+    background-color: rgba(255, 255, 255, 0.2);
     width: 90%;
-    height: 100px;
+    height: clamp(3rem, 8vw, 100px);
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
@@ -23,9 +19,17 @@
     );
 }
 
+.wrapper-paused-hover:hover .item {
+    animation-play-state: paused;
+}
+
+.wrapper-paused .item {
+    animation-play-state: paused;
+}
+
 .technology-slider {
-    width: 5rem;
-    height: 5rem;
+    width: clamp(3rem, 7vw, 5rem);
+    height: auto;
     color: white;
 }
 
@@ -43,10 +47,9 @@
 
 .item:hover {
     transform: scale(1.1);
-    .item1 {
-        animation-play-state: paused;
-    }
 }
+
+
 
 .item:has(img[alt="Express.js-icon"]),
 .item:has(img[alt="jQuery-icon"]) {
@@ -110,12 +113,6 @@
 @media (max-width: 1024px) {
     .wrapper {
         margin-top: 3rem;
-        height: 4rem;
-    }
-
-    .technology-slider {
-        width: 3rem;
-        height: 3rem;
     }
 
     .item {

@@ -45,21 +45,21 @@ const projects = [
   },
   {
     id: 3,
-    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740589577/JournalAppCapture_z9pb25.png",
-    alt: "Journal App Image",
-    title: "Journal App",
-    description: `A simple and intuitive daily notes app that allows users to sign in via Google or email. 
-                  It offers features to quickly create, edit, add images, and delete notes, 
-                  making it easy to keep track of your thoughts and tasks every day.`,
-    link: 'https://t0n1-dev.github.io/react-journal-app/',
-    github: 'https://github.com/T0N1-Dev/react-journal-app',
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745263470/React-tech-Slider-Demo_e9ozt4.png",
+    alt: "NPM package",
+    title: "react-tech-slider",
+    description: `A reusable and customizable npm package to showcase brand logos or tech stacks with 
+                  smooth infinite animation. Perfect for portfolios, agency pages, SaaS websites, and more...`,
+    link: 'https://react-tech-slider-demo-git-main-t0n1-devs-projects.vercel.app/',
+    github: 'https://github.com/T0N1-Dev/react-tech-slider?tab=readme-ov-file',
+    npm: 'https://www.npmjs.com/package/react-tech-slider?activeTab=readme',
     technologies: [
       { logo: "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg", name: "React" },
-      { logo: "https://img.icons8.com/color/480/redux.png", name: "Redux" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594999/react-router-svgrepo-com_il0l7e.svg", name: "React Router" },
-      { logo: "https://img.icons8.com/color/480/firebase.png", name: "Firebase" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594744/sass-svgrepo-com_bxczfn.svg", name: "Sass" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740591797/jest-snapshot-svgrepo-com_xykglj.svg", name: "Jest" }
+      { logo: "https://img.icons8.com/fluency/240/nextjs.png", name: "Next.js" },
+      { logo: "https://img.icons8.com/color/144/tailwindcss.png", name: "Tailwind" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745264239/139895814_wbtpon.png", name: "Shadcn" },
+      { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
     ]
   }
 ];
