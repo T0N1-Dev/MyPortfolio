@@ -4,7 +4,7 @@ import '../assets/css/pages/projects.css';
 const projects = [
   {
     id: 1,
-    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740582296/CalendarCapture_xhd7is.png",
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1740582296/CalendarCapture_xhd7is.png",
     alt: "Event Calendar App Image",
     title: "Event Calendar App",
     description: `A modern and intuitive calendar app for managing events efficiently. 
@@ -20,12 +20,12 @@ const projects = [
       { logo: "https://img.icons8.com/color/480/redux.png", name: "Redux" },
       { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594999/react-router-svgrepo-com_il0l7e.svg", name: "React Router" },
       { logo: "https://img.icons8.com/color/480/java-web-token.png", name: "JWT" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740591797/jest-snapshot-svgrepo-com_xykglj.svg", name: "Jest" }
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1740591797/jest-snapshot-svgrepo-com_xykglj.svg", name: "Jest" }
     ]
   },
   {
     id: 2,
-    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1740515058/Estadistica_en_el_dash_2_z4weoy.jpg",
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1740515058/Estadistica_en_el_dash_2_z4weoy.jpg",
     alt: "Management ISMN Image",
     title: "ISMN Management",
     description: `Efficient management of ISMN requests and music catalog. 
@@ -36,16 +36,16 @@ const projects = [
     github: 'https://github.com/T0N1-Dev/ISMN-Cuba',
     technologies: [
       { logo: "https://img.icons8.com/color/480/python--v1.png", name: "Python" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740587765/django-icon-svgrepo-com_ve7q2c.svg", name: "Django" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1740587765/django-icon-svgrepo-com_ve7q2c.svg", name: "Django" },
       { logo: "https://img.icons8.com/ios-filled/250/jquery.png", name: "jQuery" },
       { logo: "https://img.icons8.com/color/480/postgreesql.png", name: "PostgreSQL" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740587913/sqlite-svgrepo-com_cdkqos.svg", name: "SQLite" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1740587913/sqlite-svgrepo-com_cdkqos.svg", name: "SQLite" },
       { logo: "https://img.icons8.com/color-glass/480/bootstrap.png", name: "Bootstrap" }
     ]
   },
   {
     id: 3,
-    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745263470/React-tech-Slider-Demo_e9ozt4.png",
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745263470/React-tech-Slider-Demo_e9ozt4.png",
     alt: "NPM package",
     title: "react-tech-slider",
     description: `A reusable and customizable npm package to showcase brand logos or tech stacks with 
@@ -57,9 +57,44 @@ const projects = [
       { logo: "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg", name: "React" },
       { logo: "https://img.icons8.com/fluency/240/nextjs.png", name: "Next.js" },
       { logo: "https://img.icons8.com/color/144/tailwindcss.png", name: "Tailwind" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745264239/139895814_wbtpon.png", name: "Shadcn" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264239/139895814_wbtpon.png", name: "Shadcn" },
       { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
-      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
+    ]
+  },
+  {
+    id: 4,
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1746639596/Gamor-Technical-Test_ghnv3u.png",
+    alt: "Gamor Streaming",
+    title: "Gamor Streaming",
+    description: `This project is a web application for the "Gamor" game streaming platform, developed as a frontend assessment. 
+                  It focuses on HTML and CSS skills, with additional functionality implemented using the React framework. 🚀`,
+    link: 'https://gamor-technical-test.vercel.app/',
+    github: 'https://github.com/T0N1-Dev/technical-test',
+    technologies: [
+      { logo: "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg", name: "React" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1746640784/purple-css-logo_xufnis.webp", name: "CSS" },
+      { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
+    ]
+  },
+  {
+    id: 5,
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1746643389/EcoTrack_amilce.png",
+    alt: "EcoTrack",
+    title: "EcoTrack",
+    description: `EcoTrack is a fictional video streaming platform focused on promoting sustainable content and lifestyle. 
+                  The project consists of a fully functional mini website developed using React, React Router, and SCSS Modules. 
+                  It includes four main pages: Home, About Us, Contact, and Data. The design is fully responsive and follows modern UI/UX best practices.`,
+    link: 'https://technical-test-ecotrack.vercel.app/',
+    github: 'https://github.com/T0N1-Dev/technical-test-ecotrack',
+    technologies: [
+      { logo: "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg", name: "React" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594999/react-router-svgrepo-com_il0l7e.svg", name: "React Router" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1740594744/sass-svgrepo-com_bxczfn.svg", name: "Sass" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1746640784/purple-css-logo_xufnis.webp", name: "CSS" },
+      { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
     ]
   }
 ];

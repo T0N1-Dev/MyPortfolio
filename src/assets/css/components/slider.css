@@ -122,6 +122,6 @@
 
 @media (max-height: 699px) {
     .wrapper {
-        margin-top: calc(5vh + 100px);
+        margin-top: calc(35vh + 100px);
     }
 }
