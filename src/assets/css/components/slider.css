@@ -50,7 +50,6 @@
 }
 
 
-
 .item:has(img[alt="Express.js-icon"]),
 .item:has(img[alt="jQuery-icon"]) {
     .technology-slider {
@@ -120,8 +119,14 @@
     }
 }
 
-@media (max-height: 699px) {
+@media (max-height: 699px) and (min-width: 1024px) {
     .wrapper {
-        margin-top: calc(35vh + 100px);
+        margin-top: 55vh;
+    }
+}
+
+@media (max-height: 699px) and (min-width: 2300px) {
+    .wrapper {
+        margin-top: 60vh;
     }
 }
