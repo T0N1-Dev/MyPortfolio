@@ -119,14 +119,16 @@
     }
 }
 
-@media (max-height: 699px) and (min-width: 1024px) {
+/* Atec */
+@media (min-height: 560px) and (max-height: 639px){ 
     .wrapper {
-        margin-top: 55vh;
+        margin-top: clamp(10vw, 55vh, 15vw);
     }
 }
 
-@media (max-height: 699px) and (min-width: 2300px) {
+/* TV */
+@media (max-height: 559px) {
     .wrapper {
-        margin-top: 60vh;
+        margin-top: clamp(20vw, 60vh, 25vw);
     }
 }
