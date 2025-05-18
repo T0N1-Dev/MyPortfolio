@@ -109,6 +109,12 @@
   }
 }
 
+@media (min-width:1600px) {
+    .wrapper {
+        margin-top: -40vh;
+    }
+}
+
 @media (max-width: 1024px) {
     .wrapper {
         margin-top: 3rem;
