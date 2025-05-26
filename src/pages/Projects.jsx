@@ -96,6 +96,23 @@ const projects = [
       { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
       { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
     ]
+  },
+  {
+    id: 6,
+    image: "https://res.cloudinary.com/dmfs1od9n/image/upload/v1748212994/desktop-design-light_n56qhf.jpg",
+    alt: "Browser Extensions Manager UI",
+    title: "Browser Extensions Manager UI",
+    description: `A web app for managing browser extensions. Users can toggle extensions on/off, filter by status, remove extensions, and switch between light/dark themes. 
+                  The UI is responsive and accessible, with clear focus and hover states.`,
+    link: 'https://browser-extensions-manager-six.vercel.app/',
+    github: 'https://github.com/T0N1-Dev/browser-extensions-manager',
+    technologies: [
+      { logo: "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg", name: "React" },
+      { logo: "https://img.icons8.com/color/144/tailwindcss.png", name: "Tailwind" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264239/139895814_wbtpon.png", name: "Shadcn" },
+      { logo: "https://img.icons8.com/fluency/240/vite.png", name: "Vite" },
+      { logo: "https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto,w_auto/v1745264301/LogosVitest_tbii6v.svg", name: "Vitest" },
+    ]
   }
 ];
 

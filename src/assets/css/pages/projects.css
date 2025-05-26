@@ -60,7 +60,11 @@ h2 {
 }
 
 .project-card:nth-child(4) {
-  margin-top: -8vh;
+  margin-top: -10vh;
+}
+
+.project-card:nth-child(6) {
+  margin-top: -15vh;
 }
 
 .project-header {
@@ -264,13 +268,20 @@ h2 {
     animation-range: 0 290vh !important;
   }
 
+  .project-card:nth-child(5) {
+    animation: fadeIn-right-movile linear both;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 360vh !important;
+  }
+
   .project-card:last-child {
     animation: fadeIn-left-movile linear both;
     animation-timeline: scroll(root block) !important;
-    animation-range: 0 350vh !important;
+    animation-range: 0 430vh !important;
   }
 
-  .project-card:nth-child(4) {
+  .project-card:nth-child(4),
+  .project-card:nth-child(6) {
     margin-top: inherit;
   }
   
