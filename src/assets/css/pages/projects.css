@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Retro';
-  src: url('/src/assets/fonts/Retro\ Floral.woff2') format('woff2');
+  font-family: "Retro";
+  src: url("/src/assets/fonts/Retro\ Floral.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,13 +12,12 @@
 
 .projects-section {
   max-width: 78vw;
-  max-height: 150vh;
   margin: 0 auto;
   padding: 4rem 1rem 0 1rem;
 }
 
 h2 {
-  font-family: 'Retro', Arial, Helvetica, sans-serif;
+  font-family: "Retro", Arial, Helvetica, sans-serif;
   font-size: 5rem;
   font-weight: bold;
   margin: 0;
@@ -51,7 +50,7 @@ h2 {
   border-radius: 0.75rem;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(-65vh) scale(.7);
+  transform: translateY(-65vh) scale(0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   animation: fadeIn-card linear both;
@@ -60,11 +59,11 @@ h2 {
 }
 
 .project-card:nth-child(4) {
-  margin-top: -10vh;
+  margin-top: -30vh;
 }
 
-.project-card:nth-child(6) {
-  margin-top: -15vh;
+.project-card:nth-child(5) {
+  margin-top: -25vh;
 }
 
 .project-header {
@@ -110,11 +109,11 @@ h2 {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 
 .project-content {
-  padding: .3rem 1.5rem 1.5rem 1.5rem;
+  padding: 0.3rem 1.5rem 1.5rem 1.5rem;
 }
 
 .project-description {
@@ -126,14 +125,18 @@ h2 {
 
 .project-technologies-wrapper.mask-wrapper {
   overflow: hidden;
-  mask-image: 
-    linear-gradient(to right, transparent, white 10% 90%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10% 90%,
+    transparent
+  );
 }
 
 .project-technologies {
   display: flex;
   align-items: center;
-  gap: .9rem;
+  gap: 0.9rem;
 }
 
 .project-technologies.animate {
@@ -167,16 +170,20 @@ h2 {
   }
 }
 
+.slider-container {
+  margin-top: -45vh;
+}
+
 @keyframes fadeIn {
   to {
-      transform: translateY(-50vh) scale(1);
+    transform: translateY(-50vh) scale(1);
   }
 }
 
 @keyframes fadeIn-card {
   to {
-      transform: translateY(-50vh) scale(1);
-      opacity: 1;
+    transform: translateY(-50vh) scale(1);
+    opacity: 1;
   }
 }
 
@@ -191,8 +198,9 @@ h2 {
 
 @keyframes fadeIn-left-movile {
   from {
-    transform: translateX(-100vw)
-  } to {
+    transform: translateX(-100vw);
+  }
+  to {
     transform: translateX(0);
   }
 }
@@ -212,18 +220,18 @@ h2 {
   }
 
   .project-technologies-wrapper.mask-wrapper {
-    mask-image: none
+    mask-image: none;
   }
 }
 
 @media (max-width: 1024px) {
   h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      transform: translateY(0) scale(1);
-      animation: fadeIn-right-movile linear both;
-      animation-timeline: scroll(root block) !important;
-      animation-range: 0 300px !important;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transform: translateY(0) scale(1);
+    animation: fadeIn-right-movile linear both;
+    animation-timeline: scroll(root block) !important;
+    animation-range: 0 300px !important;
   }
 
   .projects-section {
@@ -231,17 +239,17 @@ h2 {
   }
 
   .projects-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-card {
-      width: 90%;
-      max-width: 400px;
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      animation: none;
+    width: 90%;
+    max-width: 400px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: none;
   }
 
   .project-card:first-child {
@@ -281,10 +289,10 @@ h2 {
   }
 
   .project-card:nth-child(4),
+  .project-card:nth-child(5),
   .project-card:nth-child(6) {
     margin-top: inherit;
   }
-  
 
   .icon {
     width: 1.3rem;
@@ -296,7 +304,7 @@ h2 {
   }
 
   .project-technologies {
-    gap: .4rem;
+    gap: 0.4rem;
   }
 
   :root {
@@ -305,6 +313,10 @@ h2 {
 
   .technology-name {
     font-size: 0.6rem;
+  }
+
+  .slider-container {
+    margin-top: 5vh;
   }
 }
 
