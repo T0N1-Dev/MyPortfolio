@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react';
-import '../assets/css/pages/contact.css';
-import emailjs from '@emailjs/browser';
-import { useForm } from '../hooks/useForm';
-import { useShowToasts } from '../hooks/useShowToasts';
+import emailjs from "@emailjs/browser";
+import { useEffect, useState } from "react";
+import "../assets/css/pages/contact.css";
+import { useForm } from "../hooks/useForm";
+import { useShowToasts } from "../hooks/useShowToasts";
 
 export const Contact = ({ contactRef }) => {
-
   const [formData, handleInputChange, resetForm] = useForm({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [toast, showToast] = useShowToasts();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,44 +16,71 @@ export const Contact = ({ contactRef }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolledPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      const scrolledPercentage =
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
       setIsScrolled(scrolledPercentage >= 70);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isSending) return;
-    
+
     setIsSending(true);
-    showToast('info', 'Sending...', 'Your request is processing', 'https://img.icons8.com/color/480/info--v1.png', 4000);
-    
-    emailjs.send(
-      'service_bwdbne7',
-      'template_eqrxqab',
-      formData,
-      'm1kE_9UXNLNMvJGZO'
-    )
-    .then(() => {
-      showToast('success', 'Success!', 'Message sent successfully', 'https://img.icons8.com/color/480/ok--v1.png', 4000);
-      resetForm();
-      setIsSending(false);
-    })
-    .catch(() => {
-      showToast('error', 'Error!', 'Failed to send message', 'https://img.icons8.com/color/480/cancel--v1.png', 4000);
-      setIsSending(false);
-    });
+    showToast(
+      "info",
+      "Sending...",
+      "Your request is processing",
+      "https://img.icons8.com/color/480/info--v1.png",
+      4000,
+    );
+
+    emailjs
+      .send(
+        "service_bwdbne7",
+        "template_eqrxqab",
+        formData,
+        "m1kE_9UXNLNMvJGZO",
+      )
+      .then(() => {
+        showToast(
+          "success",
+          "Success!",
+          "Message sent successfully",
+          "https://img.icons8.com/color/480/ok--v1.png",
+          4000,
+        );
+        resetForm();
+        setIsSending(false);
+      })
+      .catch(() => {
+        showToast(
+          "error",
+          "Error!",
+          "Failed to send message",
+          "https://img.icons8.com/color/480/cancel--v1.png",
+          4000,
+        );
+        setIsSending(false);
+      });
   };
 
   return (
     <section className="contact-container" ref={contactRef}>
-      
-      <div className='toast-container'>
+      <div className="toast-container">
         {toast && (
           <div className={`toast toast-${toast.type}`}>
-            <img src={toast.imgURL} alt={toast.type} className="toast-icon" width="20" height="20" />
+            <img
+              src={toast.imgURL}
+              alt={toast.type}
+              className="toast-icon"
+              width="20"
+              height="20"
+            />
             <div>
               <strong>{toast?.title}</strong>
               <p>{toast?.message}</p>
@@ -64,7 +90,9 @@ export const Contact = ({ contactRef }) => {
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h1 className='contact-title'><span>Contact</span> <span className='me'>Me</span></h1>
+        <h1 className="contact-title">
+          <span>Contact</span> <span className="me">Me</span>
+        </h1>
 
         <input
           type="text"
@@ -74,28 +102,39 @@ export const Contact = ({ contactRef }) => {
           placeholder="Name"
           className="form-input"
           pattern="^[A-Za-z\s]+$"
-          onInvalid={(e) => e.target.setCustomValidity("Is that really your name?")}
-          onInput={(e) => e.target.setCustomValidity("")} 
+          onInvalid={(e) =>
+            e.target.setCustomValidity("Is that really your name?")
+          }
+          onInput={(e) => e.target.setCustomValidity("")}
           required
         />
 
-        <input 
+        <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
           className="form-input"
-          onInvalid={(e) => e.target.setCustomValidity("Your email is not correct, please check. (example@gmail.com)")}
+          onInvalid={(e) =>
+            e.target.setCustomValidity(
+              "Your email is not correct, please check. (example@gmail.com)",
+            )
+          }
           onInput={(e) => {
             e.target.setCustomValidity("");
-            if (!/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(e.target.value)) {
-              e.target.setCustomValidity("Your email must include a valid domain (e.g., .com, .net, .org).");
+            if (
+              !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+                e.target.value,
+              )
+            ) {
+              e.target.setCustomValidity(
+                "Your email must include a valid domain (e.g., .com, .net, .org).",
+              );
             }
-          }} 
+          }}
           required
         />
-
 
         <textarea
           name="message"
@@ -106,51 +145,56 @@ export const Contact = ({ contactRef }) => {
           required
         />
 
-        <button type="submit" className="btn btn-form resume-btn" disabled={isSending}>
-          {isSending ? (
-            <span className="spinner"></span>
-          ): (
-            'Send'
-          )}
+        <button
+          type="submit"
+          className="btn btn-form resume-btn"
+          disabled={isSending}
+        >
+          {isSending ? <span className="spinner"></span> : "Send"}
         </button>
       </form>
       <div className="contact-me-img-container">
-      <img 
-          src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279176/Contact_Me_l5waxg.png" 
+        <img
+          src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279176/Contact_Me_l5waxg.png"
           alt="Contact Me"
           className="contact-image"
-          loading='lazy'
-          width="200" height="200"
+          loading="lazy"
+          width="200"
+          height="200"
         />
-        <img 
+        <img
           src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279170/Message_tslghp.png"
           alt="Messages"
-          className={`floating-img messages-img ${isScrolled ? 'messages-img-animate' : ''}`}
-          loading='lazy'
-          width="50" height="50"
+          className={`floating-img messages-img ${isScrolled ? "messages-img-animate" : ""}`}
+          loading="lazy"
+          width="50"
+          height="50"
         />
-        <img 
-          src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120204/New_Project_jpme2g.png'
-          alt='Doubt'
-          className={`floating-img doubt-img ${isScrolled ? 'doubt-img-animate' : ''}`}
-          loading='lazy'
-          width="50" height="50"
+        <img
+          src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120204/New_Project_jpme2g.png"
+          alt="Doubt"
+          className={`floating-img doubt-img ${isScrolled ? "doubt-img-animate" : ""}`}
+          loading="lazy"
+          width="50"
+          height="50"
         />
-        <img 
-          src='https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120206/New_Project_1_pm42hh.png'
-          alt='Phone-Call'
-          className={`floating-img phone-call-img ${isScrolled ? 'phone-call-img-animate' : ''}`}
-          loading='lazy'
-          width="50" height="50"
+        <img
+          src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1741120206/New_Project_1_pm42hh.png"
+          alt="Phone-Call"
+          className={`floating-img phone-call-img ${isScrolled ? "phone-call-img-animate" : ""}`}
+          loading="lazy"
+          width="50"
+          height="50"
         />
-        <img 
-          src='https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279168/Calendar_bz3bw7.png'
-          alt='Calendar'
-          className={`floating-img calendar-img ${isScrolled ? 'calendar-img-animate' : ''}`}
-          loading='lazy'
-          width="50" height="50"
+        <img
+          src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_auto,q_auto/v1741279168/Calendar_bz3bw7.png"
+          alt="Calendar"
+          className={`floating-img calendar-img ${isScrolled ? "calendar-img-animate" : ""}`}
+          loading="lazy"
+          width="50"
+          height="50"
         />
       </div>
     </section>
-  )
-}
+  );
+};
