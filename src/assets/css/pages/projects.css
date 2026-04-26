@@ -224,6 +224,13 @@ h2 {
   }
 }
 
+@media (min-height: 560px) {
+  .project-card:nth-child(5),
+  .project-card:nth-child(4) {
+    margin-top: -15vh;
+  }
+}
+
 @media (max-width: 1024px) {
   h2 {
     font-size: 2.5rem;

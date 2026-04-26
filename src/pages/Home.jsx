@@ -128,7 +128,7 @@ export const Home = ({ homeRef, contactRef }) => {
             </p>
             <div className="buttons-container">
               <a
-                href="https://drive.google.com/uc?export=download&id=1KL8lJo2vfbs5NGPacstFUa280doC61FW"
+                href="https://drive.google.com/uc?export=download&id=1gNyztyjKSJ464xSkQQpdZ-9oaBfHq8_3"
                 download="Antonio_Cruz_CV.pdf"
                 className="btn resume-btn"
                 onClick={handleCVdownload}
