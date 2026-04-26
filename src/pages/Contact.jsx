@@ -86,11 +86,10 @@ export const Contact = ({ contactRef }) => {
           onChange={handleInputChange}
           placeholder="Email"
           className="form-input"
-          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           onInvalid={(e) => e.target.setCustomValidity("Your email is not correct, please check. (example@gmail.com)")}
           onInput={(e) => {
             e.target.setCustomValidity("");
-            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(e.target.value)) {
+            if (!/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(e.target.value)) {
               e.target.setCustomValidity("Your email must include a valid domain (e.g., .com, .net, .org).");
             }
           }} 
