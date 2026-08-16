@@ -1,13 +1,13 @@
 import { useRef } from "react";
+import { Slider } from "react-tech-slider";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import { Home } from "../pages/Home";
-import { Projects } from "../pages/Projects";
-// import { Slider } from "../components/Slider";
-import { Slider } from "react-tech-slider";
+import { projects } from "../data/projects";
 import { techStack } from "../data/techStack";
 import { About } from "../pages/About";
 import { Contact } from "../pages/Contact";
+import { Home } from "../pages/Home";
+import { Projects } from "../pages/Projects";
 
 export const AppRoutes = () => {
   const homeRef = useRef(null);
@@ -23,7 +23,7 @@ export const AppRoutes = () => {
         contactRef={contactRef}
       />
       <Home homeRef={homeRef} contactRef={contactRef} />
-      <Projects projectsRef={projectsRef} />
+      <Projects projectsRef={projectsRef} projects={projects} />
       <div className="slider-container">
         <Slider brandsList={techStack} borderColor="gray" durationMs={30000} />
       </div>

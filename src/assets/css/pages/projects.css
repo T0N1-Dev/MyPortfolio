@@ -225,9 +225,12 @@ h2 {
 }
 
 @media (min-height: 560px) {
-  .project-card:nth-child(5),
   .project-card:nth-child(4) {
-    margin-top: -15vh;
+    margin-top: -10vh;
+  }
+
+  .project-card:nth-child(5) {
+    margin-top: -7vh;
   }
 }
 

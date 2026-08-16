@@ -111,8 +111,7 @@ export const Home = ({ homeRef, contactRef }) => {
         <div className="container">
           <div className="text-content">
             <h1>
-              <span>Full Stack</span>{" "}
-              <span className="developer">Developer</span>
+              <span>Software</span> <span className="developer">Engineer</span>
             </h1>
             <div className="name-tag">
               <span>Antonio Cruz</span>
